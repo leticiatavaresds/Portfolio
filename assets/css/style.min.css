@@ -1092,25 +1092,81 @@ body {
     transition: .3s;
     color: #fff
   }
+
+  .contact .php-email-form .selector {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0;
+    transition: .3s;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .contact .php-email-form .selector::after {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0;
+    transition: .3s;
+    color: rgba(238, 19, 19, 0.958);
+  }
+
+
+  /* .contact .php-email-form select::after {
+    color: #fff;
+  } */
+
+
+  .contact .php-email-form .selector option {
+    position: absolute;
+    background-color: rgb(49, 53, 57);
+    color: #03999c;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+
+
+
+  
+  
+  #dropdown:focus {
+    color: lime;
+    background: #333;
+  }
+
+  .contact .php-email-form select.decorated option:hover {
+    box-shadow: 0 0 10px 100px #29a818 inset;
+  }
+  
+  
+
   
   .contact .php-email-form input:focus,
+  .contact .php-email-form select:focus,
   .contact .php-email-form textarea:focus {
     background-color: rgba(255, 255, 255, 0.11)
   }
   
   .contact .php-email-form input::-webkit-input-placeholder,
+  .contact .php-email-form select::-webkit-input-placeholder,
   .contact .php-email-form textarea::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.3);
     opacity: 1
   }
   
   .contact .php-email-form input::-moz-placeholder,
+  .contact .php-email-form select::-moz-placeholder,
   .contact .php-email-form textarea::-moz-placeholder {
     color: rgba(255, 255, 255, 0.3);
     opacity: 1
   }
   
   .contact .php-email-form input::placeholder,
+  .contact .php-email-form select::placeholder,
   .contact .php-email-form textarea::placeholder {
     color: rgba(255, 255, 255, 0.3);
     opacity: 1
@@ -2078,7 +2134,49 @@ button {
   width: 25%;
 } */
 
- 
 
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+
+/* Select style here */
+select:not(:has(option[value="Select a Category"]:checked)) {
+  color: #149997ff !important;
+}
+
+select option:checked:after {
+  content: attr(title);
+  background: #666;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border: none;
+}
+
+
+.contact .php-email-form .selector option:checked {
+  position: absolute;
+  background-color: rgb(49, 53, 57);
+  color: #4bcbad;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.contact .php-email-form input:focus,
+  .contact .php-email-form select:focus,
+  .contact .php-email-form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.11)
+  }
+
+  .php-email-form input:not([value=""]) {
+    color: #149997ff !important;
+  }
+  
+
+  .php-email-form textarea:not([value=""]) {
+    color: #149997ff !important;
+  }
 
   

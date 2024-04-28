@@ -546,7 +546,8 @@ body {
     padding: 0;
     line-height: 1;
     font-size: 16px;
-    color: #fff
+    color: #fff;
+    margin-left: 15px;
   }
   
   .interests .icon-box:hover {
@@ -2064,6 +2065,18 @@ button {
 
 
 /* TEST */
+.iconThink {
+  background: url('assets\\img\\softSkills\\think.png');
+  height: 20px;
+  width: 20px;
+  display: block;
+  /* Other styles here */
+}
+
+/* .col-lg-4 {
+  flex: 0 0 auto;
+  width: 25%;
+} */
 
  
 

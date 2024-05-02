@@ -2792,8 +2792,28 @@
       </div>
 
       <script type="text/javascript">var submitted=false;</script>
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
+      <!-- <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
   onload = "if(submitted) {alert('Menssagem recebida. Obrigada por me contatar.');}">
+      </iframe> -->
+
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
+          onload = "
+            var loader = document.getElementById('messageLoader')
+            var message = document.getElementById('messageReceived');
+            if(submitted) {
+            
+            setTimeout(function(){
+              sending = false;
+              loader.style.display = 'none';              
+              message.style.display = 'block';
+              message.scrollIntoView();}, 1500);
+
+            }
+            
+            if(sending){
+              loader.scrollIntoView();
+              message.style.display = 'none';
+              loader.style.display = 'block';}">
       </iframe>
 
       
@@ -2804,6 +2824,7 @@
             target="hidden_iframe"
             id="bootstrapForm"
             method="POST"
+            onclick="sending=true;"
             onsubmit="submitted=true;">
 
         <div class="row">
@@ -2852,6 +2873,14 @@
         <div class="text-center">
           <button type="submit" value="Submit" id="sendSignal">Me Envie uma Mensagem!
           </button>
+        </div>
+
+        <div class="formLoader" id = "messageLoader" style="display: none;">
+          <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
+
+        <div id = "messageReceived" style="display: none;">
+          <h2 class="formMessage"> Mensagem recebida. Obrigada por me contatar.</h2>
         </div>
 
       </form>

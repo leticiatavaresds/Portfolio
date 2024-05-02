@@ -2792,11 +2792,30 @@
       </div>
 
       <script type="text/javascript">var submitted=false;</script>
+      <!-- <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
+          onload = "if(submitted) {alert('Message received. Thank you for contacting me.');}">
+      </iframe> -->
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
-  onload = "if(submitted) {alert('Message received. Thank you for contacting me.');}">
+          onload = "
+            var loader = document.getElementById('messageLoader')
+            var message = document.getElementById('messageReceived');
+            if(submitted) {
+            
+            setTimeout(function(){
+              sending = false;
+              loader.style.display = 'none';              
+              message.style.display = 'block';
+              message.scrollIntoView();}, 1500);
+
+            }
+            
+            if(sending){
+              loader.scrollIntoView();
+              message.style.display = 'none';
+              loader.style.display = 'block';}">
       </iframe>
 
-      
+
 
       <form class="php-email-form mt-4"
             name="form"
@@ -2804,6 +2823,7 @@
             target="hidden_iframe"
             id="bootstrapForm"
             method="POST"
+            onclick="sending=true;"
             onsubmit="submitted=true;">
 
         <div class="row">
@@ -2854,7 +2874,17 @@
           </button>
         </div>
 
+        <div class="formLoader" id = "messageLoader" style="display: none;">
+          <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
+
+        <div id = "messageReceived" style="display: none;">
+          <h2 class="formMessage"> Message received. Thank you for contacting me.</h2>
+        </div>
+  
+
       </form>
+
 
     </div><div class="credits">
       <span style="font-size: 0.9rem !important;font-family: poppins-regular, sans-serif !important;">© Copyright 2024 - 
@@ -2914,9 +2944,11 @@
         error: function () {
             // Submit of form should be successful but JSONP callback will fail because Google Forms
             // does not support it, so this is handled as a failure.
-            alert('Form Submitted. Thanks.')
-            // You can also redirect the user to a custom thank-you page:
-            // window.location = 'http://www.mydomain.com/thankyoupage.html'
+            // alert('Form Submitted. Thanks.')
+
+            document.getElementById("messageReceived").style.display = "block";
+
+            
         }
     })
 })

@@ -129,7 +129,11 @@ body {
   }
   
   .portfolio-images {
-    width: 800px;
+    height: 400px;
+    aspect-ratio: 16/9;
+  }
+
+  .certificates-images {
     height: 400px
   }
   
@@ -961,7 +965,8 @@ body {
   
   .portfolio-details .portfolio-info p {
     font-size: 15px;
-    padding: 15px 0 0 0
+    padding: 15px 0 0 0;
+    text-align: justify;
   }
   
   @media(max-width:992px) {

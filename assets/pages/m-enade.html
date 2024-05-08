@@ -22,7 +22,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-            <h2 class="portfolio-title">ENADE Analysis in 2017, 2018 and 2019</h2>
+            <h2 class="portfolio-title" name = "english">ENADE Analysis in 2017, 2018 and 2019</h2>
+            <h2 class="portfolio-title" name = "portuguese">ENADE Análises em 2017, 2018 e 2019</h2>
+
             <div class="portfolio-details-slider swiper-container">
               <div class="swiper-wrapper align-items-center">                
                 <div class="swiper-slide">
@@ -33,15 +35,28 @@
             </div>
           </div>
           <div class="col-lg-4 portfolio-info">
-            <h3>Project information</h3>
+            <h3 name = "english">Project information</h3>
+            <h3 name = "portuguese">Informações do Projeto</h3>
             <ul>
-              <li><strong>Category</strong>: DATA WAREHOUSE, DATA ANALYTICS & MACHINE LEARNING</li>
-              <li><strong>Client</strong>: Personal</li>
-              <li><strong>Project date</strong>: Oct 14, 2022</li>
-              <li><strong>Project URL</strong>: <a target="_blank" href="https://github.com/leticiatavaresds/Projeto_ENADE">https://github.com/leticiatavaresds/Projeto_ENADE</a></li>
+              
+              
+
+              <li name = "english"><strong>Category</strong>: DATA WAREHOUSE, DATA ANALYTICS & MACHINE LEARNING</li>
+              <li name = "portuguese"><strong>Categoria</strong>: DATA WAREHOUSE, DATA ANALYTICS & MACHINE LEARNING</li>
+              <li name = "english"><strong>Client</strong>: Personal</li>
+              <li name = "portuguese"><strong>Cliente</strong>: Pessoal</li>
+              <li name = "english"><strong>Data do Projeto</strong>: Oct 14, 2022</li>
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Out 14, 2022</li>
+              <li name = "english"><strong>Project URL</strong>: <a target="_blank" href="https://github.com/leticiatavaresds/Projeto_ENADE">https://github.com/leticiatavaresds/Projeto_ENADE</a></li>
+              <li name = "portuguese"><strong>URL do Projeto</strong>: <a target="_blank" href="https://github.com/leticiatavaresds/Projeto_ENADE">https://github.com/leticiatavaresds/Projeto_ENADE</a></li>
+
+
             </ul>
-            <p>
+            <p name = "english">
               In this project, I use the Python language combined with SQLite to build a Date Warehouse for ENADE Microdata from the years 2017, 2018 and 2019 and perform data analysis followed by a prediction model.
+            </p>
+            <p name = "portuguese">
+              Neste projeto, utilizei a linguagem Python em conjunto com SQLite para construir um Data Warehouse para Microdados do ENADE dos anos de 2017, 2018 e 2019, e realizei análise de dados seguida por um modelo de previsão.
             </p>
           </div>
         </div>
@@ -53,6 +68,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+  <script>
+    // goToPT();
+    if (localStorage.idiom == "portuguese"){
+      goToPT();
+    }else if(localStorage.idiom == "english"){
+      goToEN();
+    }
+      
+      // setTimeout(function(){goToPT();}, 200);
+      
+   </script>
+
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

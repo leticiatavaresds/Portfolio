@@ -22,7 +22,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-            <h2 class="portfolio-title">Mago Sossegado - UX Use Case</h2>
+            <h2 class="portfolio-title" name = "english">Mago Sossegado - UX Use Case</h2>
+            <h2 class="portfolio-title" name = "portuguese">Mago Sossegado - UX Caso de Uso</h2>
+
             <div class="portfolio-details-slider swiper-container">
               <div class="swiper-wrapper align-items-center">                
                 <div class="swiper-slide">
@@ -33,15 +35,28 @@
             </div>
           </div>
           <div class="col-lg-4 portfolio-info">
-            <h3>Project information</h3>
+            <h3 name = "english">Project information</h3>
+            <h3 name = "portuguese">Informações do Projeto</h3>
             <ul>
-              <li><strong>Category</strong>: WEB DESIGN</li>
-              <li><strong>Client</strong>: Personal</li>
-              <li><strong>Project date</strong>: Oct 6, 2021</li>
-              <li><strong>Project URL</strong>: <a target="_blank" href="https://luizedu-sperez.medium.com/mago-sossegado-do-estado-de-ansiedade-e-estresse-a-organiza%C3%A7%C3%A3o-e-paz-ff38844b2314">https://luizedu-sperez.medium.com/mago-sossegado-do-estado-de-ansiedade-e-estresse-a-organiza%C3%A7%C3%A3o-e-paz-ff38844b2314</a></li>
+              
+              
+
+              <li name = "english"><strong>Category</strong>: WEB DESIGN</li>
+              <li name = "portuguese"><strong>Categoria</strong>: WEB DESIGN</li>
+              <li name = "english"><strong>Client</strong>: Personal</li>
+              <li name = "portuguese"><strong>Cliente</strong>: Pessoal</li>
+              <li name = "english"><strong>Data do Projeto</strong>: Oct 6, 2021</li>
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Out 6, 2021</li>
+              <li name = "english"><strong>Project URL</strong>: <a target="_blank" href="https://luizedu-sperez.medium.com/mago-sossegado-do-estado-de-ansiedade-e-estresse-a-organiza%C3%A7%C3%A3o-e-paz-ff38844b2314">https://luizedu-sperez.medium.com/mago-sossegado-do-estado-de-ansiedade-e-estresse-a-organiza%C3%A7%C3%A3o-e-paz-ff38844b2314</a></li>
+              <li name = "portuguese"><strong>URL do Projeto</strong>: <a target="_blank" href="https://luizedu-sperez.medium.com/mago-sossegado-do-estado-de-ansiedade-e-estresse-a-organiza%C3%A7%C3%A3o-e-paz-ff38844b2314">https://luizedu-sperez.medium.com/mago-sossegado-do-estado-de-ansiedade-e-estresse-a-organiza%C3%A7%C3%A3o-e-paz-ff38844b2314</a></li>
+
+
             </ul>
-            <p>
+            <p name = "english">
               UX Design case study focused on an application focused on helping IT professionals live less anxious lives. Carried out by a team composed of Eduardo Leão, José Victor, Letícia Tavares and Luiz Eduardo.
+            </p>
+            <p name = "portuguese">
+              Estudo de caso de Design de Experiência do Usuário centrado em um aplicativo destinado a auxiliar profissionais de TI a viverem vidas menos ansiosas. Realizado por uma equipe composta por Eduardo Leão, José Victor, Letícia Tavares e Luiz Eduardo.
             </p>
           </div>
         </div>
@@ -53,6 +68,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+  <script>
+    // goToPT();
+    if (localStorage.idiom == "portuguese"){
+      goToPT();
+    }else if(localStorage.idiom == "english"){
+      goToEN();
+    }
+      
+      // setTimeout(function(){goToPT();}, 200);
+      
+   </script>
+
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

@@ -35,17 +35,25 @@
             </div>
           </div>
           <div class="col-lg-6 portfolio-info" style="padding-top: 7%;">
-            <h3>Course information</h3>
+            <h3 name = "english">Course information</h3>
+            <h3 name = "portuguese">Informações do Curso</h3>
             <ul>
-              <li><strong>Areas</strong>: DATA SCIENCE</li>
-              <li><strong>Organization</strong>: IBM</li>
-              <li><strong>Completion date</strong>: Set, 2021</li> 
- <li><strong>Certificate URL</strong>: <a href="https://courses.yl.skillsnetwork.site/certificates/29232be62dc54a1e824839c796fe7980" target="_blank">Verify</a></li>
+              <li name = "english"><strong>Areas</strong>: DATA SCIENCE</li>
+              <li name = "portuguese"><strong>Áreas</strong>: CIÊNCIA DE DADOS</li>
+              <li name = "english"><strong>Organization</strong>: IBM</li>
+              <li name = "portuguese"><strong>Organização</strong>: IBM</li>
+              <li name = "english"><strong>Completion Date</strong>: Sep, 2021</li> 
+ <li name = "english"><strong>Certificate URL</strong>: <a href="https://courses.yl.skillsnetwork.site/certificates/29232be62dc54a1e824839c796fe7980" target="_blank">Verify</a></li>
 
-              <!-- <li><strong>Certificate URL</strong>: <a href="var_link" target="_blank">Verify</a></li> -->
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Set, 2021</li> 
+ <li name = "portuguese"><strong>Certificate URL</strong>: <a href="https://courses.yl.skillsnetwork.site/certificates/29232be62dc54a1e824839c796fe7980" target="_blank">Verify</a></li>
+
             </ul>
-            <p>
+            <p name = "english">
               In this course provided by IBM, I met some data science professionals and was given an overview of what data science is today.
+            </p>
+            <p name = "portuguese">
+              Neste curso ministrado pela IBM, conheci alguns profissionais de ciência de dados e tive uma visão geral do que é ciência de dados hoje.
             </p>
           </div>
         </div>
@@ -57,6 +65,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+ <script>
+  // goToPT();
+  if (localStorage.idiom == "portuguese"){
+    goToPT();
+  }else if(localStorage.idiom == "english"){
+    goToEN();
+  }
+    
+    // setTimeout(function(){goToPT();}, 200);
+    
+ </script>
+  
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

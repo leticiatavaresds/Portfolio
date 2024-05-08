@@ -35,15 +35,21 @@
             </div>
           </div>
           <div class="col-lg-6 portfolio-info" style="padding-top: 7%;">
-            <h3>Course information</h3>
+            <h3 name = "english">Course information</h3>
+            <h3 name = "portuguese">Informações do Curso</h3>
             <ul>
-              <li><strong>Areas</strong>: DATA SCIENCE</li>
-              <li><strong>Organization</strong>: IBM</li>
-              <li><strong>Completion date</strong>: Apr, 2022</li>
-              <!-- <li><strong>Certificate URL</strong>: <a href="var_link" target="_blank">Verify</a></li> -->
+              <li name = "english"><strong>Areas</strong>: DATA SCIENCE</li>
+              <li name = "portuguese"><strong>Áreas</strong>: CIÊNCIA DE DADOS</li>
+              <li name = "english"><strong>Organization</strong>: IBM</li>
+              <li name = "portuguese"><strong>Organização</strong>: IBM</li>
+              <li name = "english"><strong>Completion Date</strong>: Apr, 2022</li>
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Abr, 2022</li>
             </ul>
-            <p>
+            <p name = "english">
               This Brazil Clean Company Act (CCA) course focuses on Brazilian anti-corruption law and with it I was able to learn more about jurisdiction-specific rules and regulations in Brazil.
+            </p>
+            <p name = "portuguese">
+              Este curso da Lei da Empresa Limpa do Brasil (CCA) concentra-se na lei anticorrupção brasileira e com ele pude aprender mais sobre regras e regulamentos específicos de jurisdição no Brasil.
             </p>
           </div>
         </div>
@@ -55,6 +61,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+ <script>
+  // goToPT();
+  if (localStorage.idiom == "portuguese"){
+    goToPT();
+  }else if(localStorage.idiom == "english"){
+    goToEN();
+  }
+    
+    // setTimeout(function(){goToPT();}, 200);
+    
+ </script>
+  
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

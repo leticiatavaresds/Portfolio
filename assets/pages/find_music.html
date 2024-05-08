@@ -22,7 +22,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-            <h2 class="portfolio-title">Find Your Music</h2>
+            <h2 class="portfolio-title" name = "english">Find Your Music</h2>
+            <h2 class="portfolio-title" name = "portuguese">Encontre Sua Música</h2>
+
             <div class="portfolio-details-slider swiper-container">
               <div class="swiper-wrapper align-items-center">                
                 <div class="swiper-slide">
@@ -51,15 +53,28 @@
             </div>
           </div>
           <div class="col-lg-4 portfolio-info">
-            <h3>Project information</h3>
+            <h3 name = "english">Project information</h3>
+            <h3 name = "portuguese">Informações do Projeto</h3>
             <ul>
-              <li><strong>Category</strong>: DATABASE, DATA WAREHOUSE, MACHINE LEARNING & WEB DESIGN</li>
-              <li><strong>Client</strong>: Personal</li>
-              <li><strong>Project date</strong>: Oct 17, 2022</li>
-              <li><strong>Project URL</strong>: <a target="_blank" href="https://github.com/leticiatavaresds/Banco-de-Dados-Spotify">https://github.com/leticiatavaresds/Banco-de-Dados-Spotify</a></li>
+              
+              
+
+              <li name = "english"><strong>Category</strong>: DATABASE, DATA WAREHOUSE, MACHINE LEARNING & WEB DESIGN</li>
+              <li name = "portuguese"><strong>Categoria</strong>: DATABASE, DATA WAREHOUSE, MACHINE LEARNING & WEB DESIGN</li>
+              <li name = "english"><strong>Client</strong>: Personal</li>
+              <li name = "portuguese"><strong>Cliente</strong>: Pessoal</li>
+              <li name = "english"><strong>Data do Projeto</strong>: Oct 17, 2022</li>
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Out 17, 2022</li>
+              <li name = "english"><strong>Project URL</strong>: <a target="_blank" href="https://github.com/leticiatavaresds/Banco-de-Dados-Spotify">https://github.com/leticiatavaresds/Banco-de-Dados-Spotify</a></li>
+              <li name = "portuguese"><strong>URL do Projeto</strong>: <a target="_blank" href="https://github.com/leticiatavaresds/Banco-de-Dados-Spotify">https://github.com/leticiatavaresds/Banco-de-Dados-Spotify</a></li>
+
+
             </ul>
-            <p>
+            <p name = "english">
               Construction and implementation of a relational database with music data for the development of a Web application.
+            </p>
+            <p name = "portuguese">
+              Construção e implementação de um banco de dados relacional com dados musicais para o desenvolvimento de uma aplicação web.
             </p>
           </div>
         </div>
@@ -71,6 +86,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+  <script>
+    // goToPT();
+    if (localStorage.idiom == "portuguese"){
+      goToPT();
+    }else if(localStorage.idiom == "english"){
+      goToEN();
+    }
+      
+      // setTimeout(function(){goToPT();}, 200);
+      
+   </script>
+
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

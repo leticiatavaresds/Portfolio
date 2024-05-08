@@ -35,17 +35,25 @@
             </div>
           </div>
           <div class="col-lg-6 portfolio-info" style="padding-top: 7%;">
-            <h3>Course information</h3>
+            <h3 name = "english">Course information</h3>
+            <h3 name = "portuguese">Informações do Curso</h3>
             <ul>
-              <li><strong>Areas</strong>: DATA SCIENCE</li>
-              <li><strong>Organization</strong>: Coursera</li>
-              <li><strong>Completion date</strong>: Out, 2022</li> 
- <li><strong>Certificate URL</strong>: <a href="https://coursera.org/verify/N9YJKYHHW57Z" target="_blank">Verify</a></li>
+              <li name = "english"><strong>Areas</strong>: DATA SCIENCE</li>
+              <li name = "portuguese"><strong>Áreas</strong>: CIÊNCIA DE DADOS</li>
+              <li name = "english"><strong>Organization</strong>: Coursera</li>
+              <li name = "portuguese"><strong>Organização</strong>: Coursera</li>
+              <li name = "english"><strong>Completion Date</strong>: Oct, 2022</li> 
+ <li name = "english"><strong>Certificate URL</strong>: <a href="https://coursera.org/verify/N9YJKYHHW57Z" target="_blank">Verify</a></li>
 
-              <!-- <li><strong>Certificate URL</strong>: <a href="var_link" target="_blank">Verify</a></li> -->
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Out, 2022</li> 
+ <li name = "portuguese"><strong>Certificate URL</strong>: <a href="https://coursera.org/verify/N9YJKYHHW57Z" target="_blank">Verify</a></li>
+
             </ul>
-            <p>
+            <p name = "english">
               In this guided project, I was able to work with Google's BigQuery, covering topics about its use for data collection, SQL queries and visualizations of the collected data.
+            </p>
+            <p name = "portuguese">
+              Neste projeto orientado, pude trabalhar com o BigQuery do Google, abordando tópicos sobre sua utilização para coleta de dados, consultas SQL e visualizações dos dados coletados.
             </p>
           </div>
         </div>
@@ -57,6 +65,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+ <script>
+  // goToPT();
+  if (localStorage.idiom == "portuguese"){
+    goToPT();
+  }else if(localStorage.idiom == "english"){
+    goToEN();
+  }
+    
+    // setTimeout(function(){goToPT();}, 200);
+    
+ </script>
+  
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

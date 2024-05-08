@@ -35,17 +35,25 @@
             </div>
           </div>
           <div class="col-lg-6 portfolio-info" style="padding-top: 7%;">
-            <h3>Course information</h3>
+            <h3 name = "english">Course information</h3>
+            <h3 name = "portuguese">Informações do Curso</h3>
             <ul>
-              <li><strong>Areas</strong>: DATA SCIENCE</li>
-              <li><strong>Organization</strong>: IBM</li>
-              <li><strong>Completion date</strong>: Out, 2022</li> 
- <li><strong>Certificate URL</strong>: <a href="https://www.coursera.org/account/accomplishments/verify/3WRRWEFH4U5K?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">Verify</a></li>
+              <li name = "english"><strong>Areas</strong>: DATA SCIENCE</li>
+              <li name = "portuguese"><strong>Áreas</strong>: CIÊNCIA DE DADOS</li>
+              <li name = "english"><strong>Organization</strong>: IBM</li>
+              <li name = "portuguese"><strong>Organização</strong>: IBM</li>
+              <li name = "english"><strong>Completion Date</strong>: Oct, 2022</li> 
+ <li name = "english"><strong>Certificate URL</strong>: <a href="https://www.coursera.org/account/accomplishments/verify/3WRRWEFH4U5K?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">Verify</a></li>
 
-              <!-- <li><strong>Certificate URL</strong>: <a href="var_link" target="_blank">Verify</a></li> -->
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Out, 2022</li> 
+ <li name = "portuguese"><strong>Certificate URL</strong>: <a href="https://www.coursera.org/account/accomplishments/verify/3WRRWEFH4U5K?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" target="_blank">Verify</a></li>
+
             </ul>
-            <p>
+            <p name = "english">
               In this course I was able to see more about data science tools such as Jupyter Notebooks, RStudio IDE and Watson Studio. I looked at the purpose of each tool, what programming languages they can run, their capabilities and limitations, and how data scientists currently use these tools.
+            </p>
+            <p name = "portuguese">
+              Neste curso, pude ver mais sobre ferramentas de ciência de dados, como Jupyter Notebooks, RStudio IDE e Watson Studio. Analisei a finalidade de cada ferramenta, quais linguagens de programação elas podem executar, suas capacidades e limitações e como os cientistas de dados usam essas ferramentas atualmente.
             </p>
           </div>
         </div>
@@ -57,6 +65,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+ <script>
+  // goToPT();
+  if (localStorage.idiom == "portuguese"){
+    goToPT();
+  }else if(localStorage.idiom == "english"){
+    goToEN();
+  }
+    
+    // setTimeout(function(){goToPT();}, 200);
+    
+ </script>
+  
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

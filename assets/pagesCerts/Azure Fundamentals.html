@@ -35,17 +35,25 @@
             </div>
           </div>
           <div class="col-lg-6 portfolio-info" style="padding-top: 7%;">
-            <h3>Course information</h3>
+            <h3 name = "english">Course information</h3>
+            <h3 name = "portuguese">Informações do Curso</h3>
             <ul>
-              <li><strong>Areas</strong>: DATA SCIENCE</li>
-              <li><strong>Organization</strong>: Microsoft</li>
-              <li><strong>Completion date</strong>: Apr, 2022</li> 
- <li><strong>Certificate URL</strong>: <a href="https://coursera.org/share/c6499beee8a5be5b351606ec996acbe7" target="_blank">Verify</a></li>
+              <li name = "english"><strong>Areas</strong>: DATA SCIENCE</li>
+              <li name = "portuguese"><strong>Áreas</strong>: CIÊNCIA DE DADOS</li>
+              <li name = "english"><strong>Organization</strong>: Microsoft</li>
+              <li name = "portuguese"><strong>Organização</strong>: Microsoft</li>
+              <li name = "english"><strong>Completion Date</strong>: Apr, 2022</li> 
+ <li name = "english"><strong>Certificate URL</strong>: <a href="https://coursera.org/share/c6499beee8a5be5b351606ec996acbe7" target="_blank">Verify</a></li>
 
-              <!-- <li><strong>Certificate URL</strong>: <a href="var_link" target="_blank">Verify</a></li> -->
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Abr, 2022</li> 
+ <li name = "portuguese"><strong>Certificate URL</strong>: <a href="https://coursera.org/share/c6499beee8a5be5b351606ec996acbe7" target="_blank">Verify</a></li>
+
             </ul>
-            <p>
+            <p name = "english">
               The course introduced me to Azure's core compute, networking, storage, and database services, as well as teaching me about cloud security best practices and exploring topics like IoT and machine learning. Although the course is offered by Microsoft, the certificate was made available by IBM's YourLearning which monitors progress.
+            </p>
+            <p name = "portuguese">
+              O curso me apresentou aos principais serviços de computação, rede, armazenamento e banco de dados do Azure, além de me ensinar sobre as práticas recomendadas de segurança na nuvem e explorar tópicos como IoT e aprendizado de máquina. Embora o curso seja oferecido pela Microsoft, o certificado foi disponibilizado pela YourLearning da IBM que monitora o progresso.
             </p>
           </div>
         </div>
@@ -57,6 +65,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+ <script>
+  // goToPT();
+  if (localStorage.idiom == "portuguese"){
+    goToPT();
+  }else if(localStorage.idiom == "english"){
+    goToEN();
+  }
+    
+    // setTimeout(function(){goToPT();}, 200);
+    
+ </script>
+  
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

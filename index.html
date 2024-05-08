@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo.png">
   <link rel="icon" type="image/png" sizes="180x180" href="assets/img/logo.png">
 
-  <title>Leticia Tavares | Dada Scientist </title>
+  <title id = "titleWeb">Letícia Tavares | Dada Scientist</title>
   <meta name="google-site-verification" content="AwGOVjRtzVUPIrlZwzng4qJRJc4OMZt41dvYQzgjvWc" />
   
   <!-- Google Tag Manager -->
@@ -32,20 +32,20 @@
   gtag('config', 'G-W5JWGJFJ4M');
   </script>
 
-  <meta name="title" content="Leticia Tavares | Dada Scientist">
-  <meta name="description" content="Leticia Tavares - a cinephilia and a data scientist based in Rio de Janeiro.">
+  <meta name="title" content="Letícia Tavares | Dada Scientist">
+  <meta name="description" content="Letícia Tavares - a cinephilia and a data scientist based in Rio de Janeiro.">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="#">
-  <meta property="og:title" content="Leticia Tavares | Dada Scientist">
-  <meta property="og:description" content="Leticia Tavares - a cinephilia and a data scientist based in Rio de Janeiro.">
+  <meta property="og:title" content="Letícia Tavares | Dada Scientist">
+  <meta property="og:description" content="Letícia Tavares - a cinephilia and a data scientist based in Rio de Janeiro.">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="#">
-  <meta property="twitter:title" content="Leticia Tavares | Dada Scientist">
-  <meta property="twitter:description" content="Leticia Tavares - a cinephilia and a data scientist based in Rio de Janeiro.">
+  <meta property="twitter:title" content="Letícia Tavares | Dada Scientist">
+  <meta property="twitter:description" content="Letícia Tavares - a cinephilia and a data scientist based in Rio de Janeiro.">
 
   <!-- Favicons -->
   <!-- <link href="assets/img/logo.png" rel="icon">
@@ -122,7 +122,7 @@
               </div>
               <div class="prod">
                 <p class="text text--padded">Prod.</p>
-                <p class="take__text"> Leticia Tavares</p>
+                <p class="take__text"> Letícia Tavares</p>
               </div>
             </div>
             <div class="sound">
@@ -160,15 +160,20 @@
     <div class="container">
       <h1><img src="assets/img/logo.png" width="50"></h1>
       <h2 id = "cinephilia">A <span>Cinephilia</span> and a <span>Data Scientist </span>based in Rio de Janeiro</h2> 
+      <!-- <h2 id = "cinephilia" name = "portugueseSwiper">Uma <span>Cinéfila</span> e <span>Cientista de Dados </span>vivendo no Rio de Janeiro</h2>  -->
 
       <nav id="navbar" class="navbar">
         <ul id = "navOptions" class = "navOptions" onclick="showClapper()">
-          <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#resume">Resume</a></li>
-          <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-          <li  class="nav-link idiom" onclick="goToPT()"> Pt </li>
+          <li><a class="nav-link active" href="#header" id = "#header">Home</a></li>
+          <li><a class="nav-link" href="#about" id = "#about">About</a></li>
+          <li><a class="nav-link" href="#resume" id = "#resume">Resume</a></li>
+          <li><a class="nav-link" href="#portfolio" id = "#portfolio" >Portfolio</a></li>
+          <li><a class="nav-link" href="#contact" id = "#contact">Contact</a></li>        
+          
+          <li  class="nav-link idiom" name = "english" onclick="goToPtButton()"> Pt </li>
+          <li  class="nav-link idiom" name = "portuguese" onclick="goToEnButton()"> En </li>
+
+          
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -189,8 +194,10 @@
     <div class="about-me container">
 
       <div class="section-title">
-        <h2>Me?</h2>
-        <p>Let's get to know me</p>
+        <h2 name = "english">Me?</h2>
+        <p name = "english">Let's get to know me</p>
+        <h2 name = "portuguese" id = "me">Sobre mim?</h2>
+        <p name = "portuguese">Vamos me conhecer um Pouco</p>
       </div>
 
       <div class="row">
@@ -222,24 +229,40 @@
             </div>
             
             <div class="col-lg-6">
-              <h2 class = "name">Leticia Tavares </h2>
+              <h2 class = "name">Letícia Tavares</h2>
               <!-- <h3>Data Scientist / Data Analyst </h3> -->
-              <p class="font-italic textJustify">
+              <p class="font-italic textJustify" name = "english">
                 As a Data Scientist, I dive into the art of statistical modeling, machine learning, and data visualization. 
                 My mission? Unravel the hidden secrets within challenging datasets, turning numbers into powerful insights
               </p>
+
+              <p class="font-italic textJustify" name = "portuguese">
+                Como Cientista de Dados, mergulho na arte da modelagem estatística, do aprendizado de máquina e da visualização de dados. 
+                Minha missão? Desvendar os segredos ocultos em conjuntos de dados desafiadores, transformando números em insights poderosos.
+              </p>
               
               <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>B.S. in Computer Science</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Rio de Janeiro, Rio de Janeiro, Brazil</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Idioms:</strong> <span>Portuguese (Native)<br>English (Advanced)</span></li>
+                <li name = "english" ><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>B.S. in Computer Science</span></li>
+                <li name = "english" ><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                <li name = "english" ><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Rio de Janeiro, Rio de Janeiro, Brazil</span></li>
+                
+
+                <li name = "portuguese" style="display: none;"><i class="bi bi-chevron-right"></i> <strong>Diploma:</strong> <span>Bacharelado em Ciência da Computação</span></li>
+                <li name = "portuguese" style="display: none;"><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Disponível</span></li>
+                <li name = "portuguese" style="display: none;"><i class="bi bi-chevron-right"></i> <strong>Cidade:</strong> <span>Rio de Janeiro, Rio de Janeiro, Brasil</span></li>
+              
+                <li name id = "idioms"><i class="bi bi-chevron-right"></i> <strong>Idioms:</strong> <span>Portuguese (Native)<br>English (Advanced)</span></li>
               </ul>
 
-              <p class = "textJustify">Hello! My name is Leticia and I have a passion for using data to figure out cool stuff and come up with new ideas and develop innovative solutions. My journey into the world of data science began during my bachelor's degree in computer science, where I immersed myself in the realms of machine learning, statistical analysis, and data visualization.</p>
-              <p class = "textJustify">My interest in harnessing data for actionable intelligence was sparked early on, but it truly flourished as I delved into projects involving predictive analytics and optimization algorithms. From there, I transitioned into roles that allowed me to apply my skills in various domains, ranging from healthcare to finance, constantly seeking opportunities to push the boundaries of what data can accomplish.</p>
-              <p class = "textJustify">Fast-forward to today, and I've had the privilege of contributing to impactful projects at a <a href="https://www.ibm.com/" rel="noopener noreferrer" target="_blank">a huge corporation</a>, and , where I collaborated with cross-functional teams to tackle complex challenges and drive data-driven decision-making. My focus now lies in crafting robust data pipelines and developing advanced models to uncover insights that drive business growth and innovation.</p>
-              <p class = "textJustify">Here are a few technologies I’ve been working with recently:</p>
+              <p class = "textJustify" name = "english">Hello! My name is Leticia and I have a passion for using data to figure out cool stuff and come up with new ideas and develop innovative solutions. My journey into the world of data science began during my bachelor's degree in computer science, where I immersed myself in the realms of machine learning, statistical analysis, and data visualization.</p>
+              <p class = "textJustify" name = "english">My interest in harnessing data for actionable intelligence was sparked early on, but it truly flourished as I delved into projects involving predictive analytics and optimization algorithms. From there, I transitioned into roles that allowed me to apply my skills in various domains, ranging from healthcare to finance, constantly seeking opportunities to push the boundaries of what data can accomplish.</p>
+              <p class = "textJustify" name = "english">Fast-forward to today, and I've had the privilege of contributing to impactful projects at a <a href="https://www.ibm.com/" rel="noopener noreferrer" target="_blank">a huge corporation</a>, and , where I collaborated with cross-functional teams to tackle complex challenges and drive data-driven decision-making. My focus now lies in crafting robust data pipelines and developing advanced models to uncover insights that drive business growth and innovation.</p>
+              <p class = "textJustify" name = "english">Here are a few technologies I’ve been working with recently:</p>
+
+              <p class = "textJustify" name = "portuguese">Olá! Meu nome é Letícia e sou apaixonada pelo uso de dados para descobrir coisas legais, ter novas ideias e desenvolver soluções inovadoras. Minha jornada no mundo da ciência de dados começou durante meu bacharelado em ciência da computação, onde mergulhei nas áreas de aprendizado de máquina, análise estatística e visualização de dados.</p>
+              <p class = "textJustify" name = "portuguese">Desde cedo, despertei interesse em explorar dados para obter insights valiosos, mas foi ao mergulhar em projetos de análise preditiva e algoritmos de otimização que esse interesse se transformou em paixão. A partir dessa experiência, transitei para funções que me permitiram aplicar essas habilidades em diversos setores, como saúde e finanças, sempre em busca de desafios que expandissem os horizontes do potencial dos dados.</p>
+              <p class = "textJustify" name = "portuguese">Olhando para o presente, tive a oportunidade de participar de projetos significativos em <a href="https://www.ibm.com/" rel="noopener noreferrer" target="_blank">uma grande corporação</a>, onde trabalhei com equipes multidisciplinares para enfrentar desafios complexos e promover a tomada de decisões baseada em dados. Agora, meu foco está em criar pipelines de dados sólidos e desenvolver modelos avançados para descobrir insights que impulsionam o crescimento e a inovação nos negócios.</p>
+              <p class = "textJustify" name = "portuguese">Aqui estão algumas tecnologias com as quais tenho trabalhado recentemente:</p>
 
             </div>
 
@@ -264,7 +287,8 @@
           <div class="count-box">
             <i class="bi bi-journal-richtext"></i>
             <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
+            <p name = "english">Projects</p>
+            <p name = "portuguese" >Projetos</p>
           </div>
         </div>
 
@@ -272,7 +296,8 @@
           <div class="count-box">
             <i class="bi bi-code"></i>
             <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hours Of Coding A Day</p>
+            <p name = "english">Hours Of Coding A Day</p>
+            <p name = "portuguese" >Horas Programando por Dia</p>
           </div>
         </div>
 
@@ -283,15 +308,17 @@
           <div class="count-box">
             <i class="bi bi-award"></i>
             <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Awards</p>
+            <p name = "english">Awards</p>
+            <p name = "portuguese" >Prêmios</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
           <div class="count-box">
             <i class="bi bi-patch-check"></i>
-            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Certificates</p>
+            <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="0.4" class="purecounter"></span>
+            <p name = "english">Certificates</p>
+            <p name = "portuguese" >Certificados</p>
           </div>
         </div>
 
@@ -303,21 +330,21 @@
     <div class="skills container">
 
       <div class="section-title">
-        <h2>Skills</h2>
+        <h2 name = "english">Skills</h2>
+        <h2 name = "portuguese">Habilidades</h2>
       </div>
       
       <!-- Tab items -->
       <div class="tabs tabSkills">
-
         
-
         
 
          
         <div class="tab-item active">
           
             <i class="fa-solid fas fas fa-code"></i>
-            Languages
+            <span name = "english">Languages</span>
+            <span name = "portuguese">Linguagens</span>
           </div>
           
           
@@ -326,7 +353,8 @@
           <div class="tab-item">
           
             <i class="fa-solid fas fa-gear"></i>
-            Tools
+            <span name = "english">Tools</span>
+            <span name = "portuguese">Ferramentas</span>
           </div>
           
           
@@ -335,7 +363,8 @@
           <div class="tab-item">
           
             <i class="fa-solid fas fa-magnifying-glass-chart"></i>
-            Data Skills
+            <span name = "english">Data Skills</span>
+            <span name = "portuguese">Dados</span>
           </div>
           
           
@@ -344,7 +373,8 @@
           <div class="tab-item">
           
             <i class="fa-solid fas fa-brain"></i>
-            Soft Skills
+            <span name = "english">Soft Skills</span>
+            <span name = "portuguese">Interpessoais</span>
           </div>
           
            
@@ -384,7 +414,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Python</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Python</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Python</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -392,18 +423,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2017");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2017");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2017");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2017");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -426,7 +474,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> R</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> R</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> R</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -434,18 +483,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -468,7 +534,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> SQL</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> SQL</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> SQL</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -476,18 +543,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -510,7 +594,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Java</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Java</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Java</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -518,18 +603,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -552,7 +654,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> C</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> C</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> C</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -560,12 +663,22 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2018");
-                        </script>
-                    years </span>
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2018");
+                        </script> anos </span>
+                    </span>
+
+
+
                                      
                   </div>
                 </a>
@@ -583,7 +696,7 @@
                
 
               <div class="ag-courses_item">
-                <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" class="ag-courses-item_link" target="_blank">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="ag-courses-item_link" target="_blank">
                   <div class="ag-courses-item_bg"></div>
 
                   
@@ -596,7 +709,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> HTML</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> HTML</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> HTML</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -604,12 +718,22 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
-                        </script>
-                    years </span>
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
+                        </script> anos </span>
+                    </span>
+
+
+
                                      
                   </div>
                 </a>
@@ -619,7 +743,7 @@
                
 
               <div class="ag-courses_item">
-                <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" class="ag-courses-item_link" target="_blank">
+                <a href="https://developer.mozilla.orgen-US/docs/Web/CSS" class="ag-courses-item_link" target="_blank">
                   <div class="ag-courses-item_bg"></div>
 
                   
@@ -632,7 +756,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> CSS</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> CSS</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> CSS</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -640,12 +765,22 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
-                        </script>
-                    years </span>
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
+                        </script> anos </span>
+                    </span>
+
+
+
                                      
                   </div>
                 </a>
@@ -655,7 +790,7 @@
                
 
               <div class="ag-courses_item">
-                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" class="ag-courses-item_link" target="_blank">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="ag-courses-item_link" target="_blank">
                   <div class="ag-courses-item_bg"></div>
 
                   
@@ -668,7 +803,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> JavaScript</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> JavaScript</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> JavaScript</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -676,12 +812,22 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
-                        </script>
-                    years </span>
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
+                        </script> anos </span>
+                    </span>
+
+
+
                                      
                   </div>
                 </a>
@@ -764,7 +910,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Github</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Github</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Github</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -772,18 +919,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -806,7 +970,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;">  Jupyter Notebook</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english">  Jupyter Notebook</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese">  Jupyter Notebook</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -814,18 +979,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -848,7 +1030,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Tableau</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Tableau</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Tableau</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -856,18 +1039,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -890,7 +1090,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Power BI</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Power BI</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Power BI</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -898,18 +1099,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -938,7 +1156,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Power Point</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Power Point</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Power Point</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -946,18 +1165,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2014");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -980,7 +1216,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Excel</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Excel</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Excel</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -988,18 +1225,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2014");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1022,7 +1276,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Pandas</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Pandas</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Pandas</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1030,18 +1285,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2018");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1064,7 +1336,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Numpy</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Numpy</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Numpy</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1072,18 +1345,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2018");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1106,7 +1396,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Scikitlearn</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Scikitlearn</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Scikitlearn</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1114,18 +1405,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2019");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1148,7 +1456,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Matplotlib</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Matplotlib</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Matplotlib</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1156,18 +1465,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1190,7 +1516,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Apache Spark</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Apache Spark</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Apache Spark</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1198,18 +1525,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1301,7 +1645,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Classification</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Classification</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Classificação</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1309,18 +1654,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2018");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1338,7 +1700,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Regression</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Regression</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Regressão</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1346,18 +1709,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2020");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1375,7 +1755,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Clustering</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Clustering</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Clusterização</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1383,18 +1764,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1412,7 +1810,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Time Series</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Time Series</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Série Temporal</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1420,18 +1819,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1449,7 +1865,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Deep Learning</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Deep Learning</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Aprendizado Profundo</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1457,18 +1874,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2021");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2023");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1486,7 +1920,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Hypothesis Testing</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Hypothesis Testing</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Teste de Hipóteses</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1494,18 +1929,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1523,7 +1975,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> A/B testing</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> A/B testing</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Teste A/B</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1531,18 +1984,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1560,7 +2030,8 @@
                   
                   <div class="ag-courses-item_date-box">
 
-                    <p class = "ag-courses-item_date" style="max-width: 85%;"> Descriptive Analysis</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "english"> Descriptive Analysis</p>
+                    <p class = "ag-courses-item_date" style="max-width: 85%;" name = "portuguese"> Análise Descritiva</p>
 
                     <div class="progress">                      
                       <div class="progress-bar-wrap ag-courses-item_date">
@@ -1568,18 +2039,35 @@
                       </div>
                     </div>
                     
-                    Time Experience <br>
-                    Personal: <span class="ag-courses-item_date">
+                    <span name = "english">Time Experience <br></span>
+                    <span name = "portuguese">Tempo de Experiência <br></span>
+                    <span name = "english"> Personal: <span class="ag-courses-item_date">
                       <script>
                         new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
-                        </script>
-                    years </span>
-                    
-                    Professional: <span class="ag-courses-item_date"> 
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Pessoal: <span class="ag-courses-item_date">
                       <script>
-                      new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
-                      </script>
-                  years </span>   
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> anos </span>
+                    </span>
+
+
+
+                    
+                    <span name = "english"> Professional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> years </span>
+                    </span>
+
+                    <span name = "portuguese"> Profissional: <span class="ag-courses-item_date">
+                      <script>
+                        new Date().getFullYear()>document.write(new Date().getFullYear() - "2022");
+                        </script> anos </span>
+                    </span>                    
+                     
                                    
                   </div>
                 </a>
@@ -1599,71 +2087,90 @@
          
         <!-- Soft Skilss -->
         <div class="tab-pane">
-          <h5 style="font-size: 16px; color: #fff;">People perceive me as</h5>
+          <h5 style="font-size: 16px; color: #fff;" name = "english">People perceive me as</h5>
+          <h5 style="font-size: 16px; color: #fff;" name = "portuguese">As pessoas me consideram:</h5>
 
           <div class="row">
 
             
 
             <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
-              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;'>
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "english">
                 <img src="assets/img/softSkills/lampada.png" width="50"> Creative</h5>  
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "portuguese">
+                <img src="assets/img/softSkills/lampada.png" width="50"> Criativa</h5>  
             </div>
         
             
 
             <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
-              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;'>
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "english">
                 <img src="assets/img/softSkills/monitoring.png" width="50"> Observant</h5>  
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "portuguese">
+                <img src="assets/img/softSkills/monitoring.png" width="50"> Atenta</h5>  
             </div>
         
             
 
             <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
-              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;'>
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "english">
                 <img src="assets/img/softSkills/team.png" width="50"> Sociable</h5>  
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "portuguese">
+                <img src="assets/img/softSkills/team.png" width="50"> Sociável</h5>  
             </div>
         
             
 
             <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
-              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;'>
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "english">
                 <img src="assets/img/softSkills/system.png" width="50"> Collaborative</h5>  
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "portuguese">
+                <img src="assets/img/softSkills/system.png" width="50"> Colaborativa</h5>  
             </div>
         
             
 
             <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
-              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;'>
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "english">
                 <img src="assets/img/softSkills/ear.png" width="50"> Attentive Listener</h5>  
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "portuguese">
+                <img src="assets/img/softSkills/ear.png" width="50"> Boa Ouvinte</h5>  
             </div>
         
             
 
             <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
-              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;'>
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "english">
                 <img src="assets/img/softSkills/communication.png" width="50"> Communicative</h5>  
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "portuguese">
+                <img src="assets/img/softSkills/communication.png" width="50"> Comunicativa</h5>  
             </div>
         
             
 
             <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
-              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;'>
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "english">
                 <img src="assets/img/softSkills/calm.png" width="50"> Calm</h5>  
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "portuguese">
+                <img src="assets/img/softSkills/calm.png" width="50"> Calma</h5>  
             </div>
         
             
 
             <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
-              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;'>
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "english">
                 <img src="assets/img/softSkills/question.png" width="50"> Curious</h5>  
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "portuguese">
+                <img src="assets/img/softSkills/question.png" width="50"> Curiosa</h5>  
             </div>
         
             
 
             <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
-              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;'>
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "english">
                 <img src="assets/img/softSkills/puzzle.png" width="50"> Adaptable</h5>  
+              <h5 style='font-family: "Poppins", sans-serif; font-size: 16px; color: #fff;' name = "portuguese">
+                <img src="assets/img/softSkills/puzzle.png" width="50"> Adaptável</h5>  
             </div>
         
             
@@ -1678,7 +2185,7 @@
 
         </div>
       </div>
-    </div>
+      </div>
 
     <!-- End Skills -->
 
@@ -1686,7 +2193,8 @@
     <div class="interests container">
 
       <div class="section-title">
-        <h2>Interests</h2>
+        <h2 name = "english">Interests</h2>
+        <h2 name = "portuguese">Interesses</h2>
       </div>
 
       <div class="row">
@@ -1696,10 +2204,8 @@
           <div class="icon-box">
             <!-- <i class="ri-clapperboard-fill" style="color: #47aeff;"></i> -->
             <img src="assets/img/hobbies/movie.png" width="50">
-            <h3>Cinema</h3>
-          </div>
-          <div>
-            
+            <h3 name = "english">Cinema</h3>
+            <h3 name = "portuguese">Cinema</h3>
           </div>
         </div>        
         
@@ -1707,10 +2213,8 @@
           <div class="icon-box">
             <!-- <i class="ri-clapperboard-fill" style="color: #47aeff;"></i> -->
             <img src="assets/img/hobbies/theatre.png" width="50">
-            <h3>Theater</h3>
-          </div>
-          <div>
-            
+            <h3 name = "english">Theater</h3>
+            <h3 name = "portuguese">Teatro</h3>
           </div>
         </div>        
         
@@ -1718,10 +2222,8 @@
           <div class="icon-box">
             <!-- <i class="ri-clapperboard-fill" style="color: #47aeff;"></i> -->
             <img src="assets/img/hobbies/mountain-bike.png" width="50">
-            <h3>Long rides</h3>
-          </div>
-          <div>
-            
+            <h3 name = "english">Long rides</h3>
+            <h3 name = "portuguese">Longas Pedaladas</h3>
           </div>
         </div>        
         
@@ -1729,10 +2231,8 @@
           <div class="icon-box">
             <!-- <i class="ri-clapperboard-fill" style="color: #47aeff;"></i> -->
             <img src="assets/img/hobbies/open-book.png" width="50">
-            <h3>Fiction Books</h3>
-          </div>
-          <div>
-            
+            <h3 name = "english">Fiction Books</h3>
+            <h3 name = "portuguese">Livros de Ficção</h3>
           </div>
         </div>        
         
@@ -1740,10 +2240,8 @@
           <div class="icon-box">
             <!-- <i class="ri-clapperboard-fill" style="color: #47aeff;"></i> -->
             <img src="assets/img/hobbies/joystick.png" width="50">
-            <h3>Games</h3>
-          </div>
-          <div>
-            
+            <h3 name = "english">Games</h3>
+            <h3 name = "portuguese">Jogos</h3>
           </div>
         </div>        
         
@@ -1751,10 +2249,8 @@
           <div class="icon-box">
             <!-- <i class="ri-clapperboard-fill" style="color: #47aeff;"></i> -->
             <img src="assets/img/hobbies/music.png" width="50">
-            <h3>Music</h3>
-          </div>
-          <div>
-            
+            <h3 name = "english">Music</h3>
+            <h3 name = "portuguese">Música</h3>
           </div>
         </div>        
         
@@ -1762,10 +2258,8 @@
           <div class="icon-box">
             <!-- <i class="ri-clapperboard-fill" style="color: #47aeff;"></i> -->
             <img src="assets/img/hobbies/color-palette.png" width="50">
-            <h3>Draw</h3>
-          </div>
-          <div>
-            
+            <h3 name = "english">Draw</h3>
+            <h3 name = "portuguese">Desenho</h3>
           </div>
         </div>        
         
@@ -1773,13 +2267,12 @@
           <div class="icon-box">
             <!-- <i class="ri-clapperboard-fill" style="color: #47aeff;"></i> -->
             <img src="assets/img/hobbies/ukulele.png" width="50">
-            <h3>Ukulele</h3>
-          </div>
-          <div>
-            
+            <h3 name = "english">Ukulele</h3>
+            <h3 name = "portuguese">Ukulele</h3>
           </div>
         </div>        
         
+      </div>
 
     </div>
     
@@ -1793,7 +2286,8 @@
   <div class="certificates container" style="margin-top: 5%;">
 
       <div class="section-title">
-        <h2>Certificates</h2>
+        <h2 name = "english">Certificates</h2>
+        <h2 name = "portuguese">Certificates</h2>
       </div>
 
       <div class="certificates-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
@@ -1807,10 +2301,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/Azure Fundamentals.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/Azure Fundamentals.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1822,10 +2317,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/BI Foundations.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/BI Foundations.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1837,10 +2333,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/Big Data 101.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/Big Data 101.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1852,10 +2349,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/Data Science 101.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/Data Science 101.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1867,10 +2365,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/Data Science Methodology.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/Data Science Methodology.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1882,10 +2381,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/Data Science Tools.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/Data Science Tools.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1897,10 +2397,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/Databases and SQL for Data Science with Python.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/Databases and SQL for Data Science with Python.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1912,10 +2413,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/ETL and Data Pipelines with Shell, Airflow and Kafka.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/ETL and Data Pipelines with Shell, Airflow and Kafka.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1927,10 +2429,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/Getting and Cleaning Data.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/Getting and Cleaning Data.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1942,10 +2445,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/Introduction to Data Science.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/Introduction to Data Science.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1957,10 +2461,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/R Programming.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/R Programming.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1972,10 +2477,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/The Data Scientist’s Toolbox.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/The Data Scientist’s Toolbox.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -1987,10 +2493,11 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/Understanding the Brazil Clean Companies.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/Understanding the Brazil Clean Companies.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
@@ -2002,24 +2509,288 @@
 
               <!-- <h3><a href= "" class="inline-link">Azure Fundamentals</a></h3> -->
               <h3 style="margin: 10px 0px 5px 0px;">
-                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                    data-glightbox='type: external' href="assets/pagesCerts/Working with BigQuery.html" title='Divulge Details'>
-                    <i class="bx bx-link"></i>Know more</a>
+                <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' name = "knowMore"
+                    data-glightbox='type: external' href="assets/pagesCerts/Working with BigQuery.html" 
+                    title='Divulge Details'><i class="bx bx-link"></i>Know more</a>
               </h3>
+
             </div>
           </div>
 
           
 
         </div>
+
         <div class="swiper-pagination"></div>
+
       </div>
 
       <div class="owl-carousel certificates-carousel">
-
       </div>
 
   </div>
+
+  <!-- <div class="certificates container" style="margin-top: 5%;" name = "portugueseSwiper">
+
+    <div class="section-title">
+      <h2>Certificados</h2>
+    </div>
+
+    <div class="certificates-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/Azure Fundamentals.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/Azure Fundamentals.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/BI Foundations.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/BI Foundations.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/Big Data 101.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/Big Data 101.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/Data Science 101.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/Data Science 101.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/Data Science Methodology.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/Data Science Methodology.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/Data Science Tools.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/Data Science Tools.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/Databases and SQL for Data Science with Python.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/Databases and SQL for Data Science with Python.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/ETL and Data Pipelines with Shell, Airflow and Kafka.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/ETL and Data Pipelines with Shell, Airflow and Kafka.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/Getting and Cleaning Data.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/Getting and Cleaning Data.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/Introduction to Data Science.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/Introduction to Data Science.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/R Programming.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/R Programming.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/The Data Scientist’s Toolbox.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/The Data Scientist’s Toolbox.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/Understanding the Brazil Clean Companies.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/Understanding the Brazil Clean Companies.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+        <div class="swiper-slide">
+          <div class="certificate-item">
+              <img src="assets/img/certificates/Working with BigQuery.jpg" class="img-fluid" alt="">
+            
+
+            <h3 style="margin: 10px 0px 5px 0px;">
+              <a class='certs-details-lightbox' data-gallery='portfolioDetailsGallery' 
+                  data-glightbox='type: external' href="assets/pagesCerts/br/Working with BigQuery.html" title='Divulge Details'>
+                  <i class="bx bx-link"></i>Saiba mais
+              </a>
+            </h3>
+
+          </div>
+        </div>
+
+        
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+
+
+    <div class="owl-carousel certificates-carousel">
+    </div>
+
+
+  </div> -->
+
   <!-- End Certificates  -->
 
   <!-- ======= Badges ======= -->
@@ -2150,7 +2921,7 @@
                             new Date().getFullYear()>document.write(new Date().getFullYear());
                         </script>
     </span>
-    <span style="font-size: 0.9rem !important; font-family: poppins-regular, sans-serif !important;">| Design by Akash Pawara and <a href="#about">Letícia Tavares</a></span>
+    <span style="font-size: 0.9rem !important; font-family: poppins-regular, sans-serif !important;">| Made by <a href="#about">Letícia Tavares</a></span>
 
   </div>
 
@@ -2162,9 +2933,13 @@
 
     <div class="container">
       <div class="section-title">
-        <h2>Resume</h2>
-        <p>Check My Resume</p>
-        <span><a href="assets/files/resume.pdf" download="">CLICK TO DOWNLOAD RESUME</a></span> 
+        <h2 name = "english">Resume</h2>
+        <p name = "english">Check My Resume</p>
+        <span name = "english"><a href="assets/files/resume.pdf" download="">CLICK TO DOWNLOAD RESUME</a></span> 
+
+        <h2 name = "portuguese">Currículo</h2>
+        <p name = "portuguese">Confira Meu Currículo</p>
+        <span name = "portuguese"><a href="assets/files/curriculo.pdf" download="">CLIQUE PARA BAIXAR O CURRÍCULO</a></span> 
       </div>
     </div>
 
@@ -2173,7 +2948,8 @@
     <div class="container">
 
       <div class="section-title">
-        <h2 class="another">Where I’ve Worked</h2>
+        <h2 class="another" name = "english">Where I’ve Worked</h2>
+        <h2 class="another" name = "portuguese">Onde trabalhei</h2>
       </div>
 
       <div class="jobs__StyledJobsSection-labBei iQNXTb">
@@ -2214,13 +2990,20 @@
 
 
               <h3>
-                <span>Data Scientist</span>
-                <span class="company">
+                <!-- <span name = "english">Data Scientist</span> -->
+                <!-- <span name = "portugueseSwiper">Cientista de Dados</span> -->
+                <span class="company" name = "english"> Data Scientist
                   &nbsp;@&nbsp;
                   <a href="https://www.ibm.com/" class="inline-link">IBM</a>
                 </span>
+                <span class="company" name = "portuguese"> Cientista de Dados
+                  &nbsp;@&nbsp;
+                  <a href="https://www.ibm.com/" class="inline-link">IBM</a>
+                </span>
+
               </h3>
-              <p class="range">December 2022 - January 2024</p>
+              <p class="range" name = "english">December 2022 - January 2024</p>
+              <p class="range" name = "portuguese">Dezembro 2022 - Janeiro 2024</p>
               <div>
                 <ul class="textJustify">
 
@@ -2252,23 +3035,28 @@
                   
                   
                    
-                  <li>Conducted a comprehensive data source exploration for fraud detection system, sought to identify pertinent information for building an early detection system for potential fraud attempts or non-payment of health insurance contracted for employees of a company.</li>
+                  <li name = "english">Conducted a comprehensive data source exploration for fraud detection system, sought to identify pertinent information for building an early detection system for potential fraud attempts or non-payment of health insurance contracted for employees of a company.</li>
+                  <li name = "portuguese">Conduzi uma exploração abrangente de fontes de dados para um sistema de detecção de fraudes, buscando identificar informações pertinentes para a construção de um sistema de detecção de possíveis tentativas de fraude ou falta de pagamento de seguro saúde contratado para os funcionários de uma empresa.</li>
                   
                   
                    
-                  <li>Created customized algorithms to navigate various websites and platforms, gathering specific information about companies&#39; CNPJs and their respective owners.</li>
+                  <li name = "english">Created customized algorithms to navigate various websites and platforms, gathering specific information about companies&#39; CNPJs and their respective owners.</li>
+                  <li name = "portuguese">Criei algoritmos de Web Scraping para navegar em diversos sites e plataformas, coletando informações específicas sobre os CNPJs das empresas e seus respectivos proprietários.</li>
                   
                   
                    
-                  <li>Integrated the system with APIs from available data sources to ensure comprehensive and up-to-date data collection.</li>
+                  <li name = "english">Integrated the system with APIs from available data sources to ensure comprehensive and up-to-date data collection.</li>
+                  <li name = "portuguese">Integrei o sistema com APIs de fontes de dados disponíveis para garantir a coleta abrangente e atualizada de dados.</li>
                   
                   
                    
-                  <li>Developed and maintained custom dashboards to provide comprehensive insights into potential fraudulent activities and patterns.</li>
+                  <li name = "english">Developed and maintained custom dashboards to provide comprehensive insights into potential fraudulent activities and patterns.</li>
+                  <li name = "portuguese">Desenvolvi dashboards para fornecer insights abrangentes sobre atividades e padrões de fraude potenciais.</li>
                   
                   
                    
-                  <li>Conducted predictive analyses to identify high-risk groups and patterns indicative of potential fraud attempts within insurance claims or policyholder behavior.</li>
+                  <li name = "english">Conducted predictive analyses to identify high-risk groups and patterns indicative of potential fraud attempts within insurance claims or policyholder behavior.</li>
+                  <li name = "portuguese">Conduzi análises preditivas para identificar grupos de alto risco e padrões indicativos de possíveis tentativas de fraude dentro de sinistros de seguro ou comportamento de segurados.</li>
                   
                     
                 </ul>
@@ -2282,13 +3070,20 @@
 
 
               <h3>
-                <span>Early Associate Data Scientist</span>
-                <span class="company">
+                <!-- <span name = "english">Early Associate Data Scientist</span> -->
+                <!-- <span name = "portugueseSwiper">Cientista de Dados - Estagiária</span> -->
+                <span class="company" name = "english"> Early Associate Data Scientist
                   &nbsp;@&nbsp;
                   <a href="https://www.ibm.com/" class="inline-link">IBM</a>
                 </span>
+                <span class="company" name = "portuguese"> Cientista de Dados - Estagiária
+                  &nbsp;@&nbsp;
+                  <a href="https://www.ibm.com/" class="inline-link">IBM</a>
+                </span>
+
               </h3>
-              <p class="range">July 2021 - December 2022</p>
+              <p class="range" name = "english">July 2021 - December 2022</p>
+              <p class="range" name = "portuguese">Julho 2021 - Dezembro 2022</p>
               <div>
                 <ul class="textJustify">
 
@@ -2306,31 +3101,38 @@
                   
                   
                    
-                  <li>Worked at a HealthCare Insurance project, focusing on the creation of a comprehensive database housing extensive datasets pertaining to insured ndividuals&#39; medical histories, utilizing SQL and Python.</li>
+                  <li name = "english">Worked at a HealthCare Insurance project, focusing on the creation of a comprehensive database housing extensive datasets pertaining to insured ndividuals&#39; medical histories, utilizing SQL and Python.</li>
+                  <li name = "portuguese">Trabalhei em um projeto de seguros de saúde, com foco na criação de um banco de dados abrangente que abriga extensos conjuntos de dados relativos aos históricos médicos dos segurados.</li>
                   
                   
                    
-                  <li>Collaborated with multidisciplinary teams, including doctors, data analysts, and insurance specialists.</li>
+                  <li name = "english">Collaborated with multidisciplinary teams, including doctors, data analysts, and insurance specialists.</li>
+                  <li name = "portuguese">Colaborei com equipes multidisciplinares, incluindo médicos, analistas de dados e especialistas em seguros.</li>
                   
                   
                    
-                  <li>Played a key role in defining essential metrics related to healthcare costs and medical service usage.</li>
+                  <li name = "english">Played a key role in defining essential metrics related to healthcare costs and medical service usage.</li>
+                  <li name = "portuguese">Desempenhei um papel fundamental na definição de métricas essenciais relacionadas aos custos de saúde e uso de serviços médicos.</li>
                   
                   
                    
-                  <li>Developed custom dashboards offering comprehensive insights into policyholders&#39; usage patterns.</li>
+                  <li name = "english">Developed custom dashboards offering comprehensive insights into policyholders&#39; usage patterns.</li>
+                  <li name = "portuguese">Desenvolvi painéis personalizados que ofereciam insights sobre os padrões de uso dos segurados.</li>
                   
                   
                    
-                  <li>Conducted predictive analyses to identify high-risk groups prone to incurring substantial medical costs.</li>
+                  <li name = "english">Conducted predictive analyses to identify high-risk groups prone to incurring substantial medical costs.</li>
+                  <li name = "portuguese">Conduzi análises preditivas para identificar grupos de alto risco propensos a incorrer em custos médicos substanciais.</li>
                   
                   
                    
-                  <li>Engaged in all phases of machine learning model development, from inception to effective deployment, to predict medical service utilization and mitigate health risks.</li>
+                  <li name = "english">Engaged in all phases of machine learning model development, from inception to effective deployment, to predict medical service utilization and mitigate health risks.</li>
+                  <li name = "portuguese">Participei de todas as fases do desenvolvimento dos modelos de aprendizado de máquina.</li>
                   
                   
                    
-                  <li>Continuously refined and updated models to enhance accuracy and support the insurance company&#39;s management in resource optimization.</li>
+                  <li name = "english">Continuously refined and updated models to enhance accuracy and support the insurance company&#39;s management in resource optimization.</li>
+                  <li name = "portuguese">Participei da refinação e atualização contínua dos Modelos para aumentar a precisão e apoiar a gestão da seguradora na otimização de recursos.</li>
                   
                   
                   
@@ -2354,39 +3156,52 @@
 
 
               <h3>
-                <span>Data Engineer</span>
-                <span class="company">
+                <!-- <span name = "english">Data Engineer</span> -->
+                <!-- <span name = "portugueseSwiper">Engenheira de Dados - Estagiária</span> -->
+                <span class="company" name = "english"> Data Engineer
                   &nbsp;@&nbsp;
                   <a href="https://visagio.com/" class="inline-link">Visagio</a>
                 </span>
+                <span class="company" name = "portuguese"> Engenheira de Dados - Estagiária
+                  &nbsp;@&nbsp;
+                  <a href="https://visagio.com/" class="inline-link">Visagio</a>
+                </span>
+
               </h3>
-              <p class="range">July 2020 - July 2021</p>
+              <p class="range" name = "english">July 2020 - July 2021</p>
+              <p class="range" name = "portuguese">Julho 2020 - Julho 2021</p>
               <div>
                 <ul class="textJustify">
 
                   
                    
-                  <li>Engaged in a project centered on data engineering and consulting.</li>
+                  <li name = "english">Engaged in a project centered on data engineering and consulting.</li>
+                  <li name = "portuguese">Participei de um projeto centrado em engenharia de dados e consultoria.</li>
                   
                   
                    
-                  <li>Developed automations for data extraction, with a particular emphasis on integrating with SAP, the client&#39;s primary system.</li>
+                  <li name = "english">Developed automations for data extraction, with a particular emphasis on integrating with SAP, the client&#39;s primary system.</li>
+                  <li name = "portuguese">Desenvolvi automações para extração de dados em Python.</li>
                   
                   
                    
-                  <li>Worked closely with clients, gaining insight into their needs and specific requirements.</li>
+                  <li name = "english">Worked closely with clients, gaining insight into their needs and specific requirements.</li>
+                  <li name = "portuguese">Trabalhei em estreita colaboração com o cliente, obtendo insights sobre suas necessidades e requisitos específicos.</li>
                   
                   
                    
-                  <li>Utilized Python and SAP as primary tools for solution development.</li>
+                  <li name = "english">Utilized Python and SAP as primary tools for solution development.</li>
+                  <li name = "portuguese">Utilizei Python e SAP como ferramentas primárias para desenvolvimento de soluções.</li>
                   
                   
                    
-                  <li>Developed solutions to extract data from SAP, ensuring integrity and quality.</li>
+                  <li name = "english">Developed solutions to extract data from SAP, ensuring integrity and quality.</li>
+                  <li name = "portuguese">Desenvolvi soluções para extração de dados do SAP, garantindo integridade e qualidade.</li>
                   
                   
                    
-                  <li>Actively participated in processing and transforming data to prepare it for integration with the client company&#39;s website database.</li>
+                  <li name = "english">Actively participated in processing and transforming data to prepare it for integration with the client company&#39;s website database.</li>
+                  <li name = "portuguese">Participei ativamente no processamento e transformação de dados para prepará-los para integração com o banco de dados do site da empresa cliente.</li>
                   
                   
                   
@@ -2426,7 +3241,8 @@
     <div class="container">
 
       <div class="section-title">
-        <h2 class="another">Academic Background</h2>
+        <h2 class="another" name = "english">Academic Background</h2>
+        <h2 class="another" name = "portuguese">Formação Acadêmica</h2>
       </div>
 
 
@@ -2462,16 +3278,22 @@
   
   
                 <h3>
-                  <span>B.Sc. Computer Science</span>
-                  <span class="company">
+                  <span class="company" name = "english"> B.Sc. Computer Science
+                    &nbsp;@&nbsp;
+                    <a href="https://ufrj.br/" class="inline-link">UFRJ</a>
+                  </span>
+
+                  <span class="company" name = "portuguese"> Bacharelado em Ciência da Computação
                     &nbsp;@&nbsp;
                     <a href="https://ufrj.br/" class="inline-link">UFRJ</a>
                   </span>
                 </h3>
-                <p class="range">July 2019 - Present</p>
+                <p class="range" name = "english">July 2019 - Present</p>
+                <p class="range" name = "portuguese">Julho 2019 - Presente</p>
                 <div>
                   <ul class="textJustify">  
-                    <P>Pursuing a Bachelor&#39;s Degree in Computer Science at the Federal University of Rio de Janeiro (UFRJ). In this course, I am learning how to develop new technologies ethically and responsibly, in connection with the main trends in the world. I have already acquired several skills to carry out multiple activities, directing my work towards data science to act as a data analyst, data scientist, AI and Machine Learning engineer, among others.</P>                    
+                    <P name = "english">Pursuing a Bachelor&#39;s Degree in Computer Science at the Federal University of Rio de Janeiro (UFRJ). In this course, I am learning how to develop new technologies ethically and responsibly, in connection with the main trends in the world. I have already acquired several skills to carry out multiple activities, directing my work towards data science to act as a data analyst, data scientist, AI and Machine Learning engineer, among others.</P>    
+                    <P name = "portuguese">Atualmente cursando Ciência da Computação na Universidade Federal do Rio de Janeiro (UFRJ). Durante este curso, estou imersa no aprendizado sobre o desenvolvimento de novas tecnologias de maneira ética e responsável, mantendo-me alinhada com as tendências globais mais relevantes. Adquiri uma ampla gama de competências que me capacitam a desempenhar diversas atividades, com um foco específico na área de ciência de dados. Estou preparada para seguir carreiras como analista de dados, cientista de dados, engenheira de IA, Machine Learning, entre outras possibilidades emocionantes.</P>                     
                   </ul>
                 </div>
               </div>
@@ -2483,16 +3305,22 @@
   
   
                 <h3>
-                  <span>Buildings Technician</span>
-                  <span class="company">
+                  <span class="company" name = "english"> Buildings Technician
+                    &nbsp;@&nbsp;
+                    <a href="https://portal1.iff.edu.br/" class="inline-link">IFF</a>
+                  </span>
+
+                  <span class="company" name = "portuguese"> Técnico em Edificações 
                     &nbsp;@&nbsp;
                     <a href="https://portal1.iff.edu.br/" class="inline-link">IFF</a>
                   </span>
                 </h3>
-                <p class="range">March 2014 - December 2016</p>
+                <p class="range" name = "english">March 2014 - December 2016</p>
+                <p class="range" name = "portuguese">Março 2014 - Dezembro 2016</p>
                 <div>
                   <ul class="textJustify">  
-                    <P>Although I didn&#39;t pursue a career in construction, the course provided me with a strong mathematical foundation prior to my undergraduate studies. Moreover, it offered valuable practical experience in various professional settings such as firms, offices, and laboratories. These experiences encompassed organizational skills, strategic planning, and client interaction, contributing significantly to my overall skill set.</P>                    
+                    <P name = "english">Although I didn&#39;t pursue a career in construction, the course provided me with a strong mathematical foundation prior to my undergraduate studies. Moreover, it offered valuable practical experience in various professional settings such as firms, offices, and laboratories. These experiences encompassed organizational skills, strategic planning, and client interaction, contributing significantly to my overall skill set.</P>    
+                    <P name = "portuguese">Embora não tenha seguido uma carreira na construção, o curso me proporcionou uma base matemática sólida antes de iniciar meus estudos universitários. Além disso, ofereceu valiosa experiência prática em diversos ambientes profissionais, como empresas, escritórios e laboratórios. Essas experiências abrangeram habilidades organizacionais, planejamento estratégico e interação com clientes, o que contribuiu significativamente para o desenvolvimento do meu conjunto de habilidades.</P>                     
                   </ul>
                 </div>
               </div>
@@ -2507,7 +3335,8 @@
     <div class="container">
 
       <div class="section-title">
-        <h2 class="another">Academic Experiences</h2>
+        <h2 class="another" name = "english">Academic Experiences</h2>
+        <h2 class="another" name = "portuguese">Experiências Acadêmicas</h2>
       </div>
 
 
@@ -2549,16 +3378,22 @@
   
   
                 <h3>
-                  <span>Data Scientist</span>
-                  <span class="company">
+                  <span class="company" name = "english"> Data Scientist
+                    &nbsp;@&nbsp;
+                    <a href="https://www.coppead.ufrj.br/study-center-business-analytics-and-economics-bae-research-unit/" class="inline-link">COPPEAD-UFRJ</a>
+                  </span>
+
+                  <span class="company" name = "portuguese"> Cientista de Dados
                     &nbsp;@&nbsp;
                     <a href="https://www.coppead.ufrj.br/study-center-business-analytics-and-economics-bae-research-unit/" class="inline-link">COPPEAD-UFRJ</a>
                   </span>
                 </h3>
-                <p class="range">August 2022 - April 2023</p>
+                <p class="range" name = "english">August 2022 - April 2023</p>
+                <p class="range" name = "portuguese">Agosto 2022 - Abril 2023</p>
                 <div>
                   <ul class="textJustify">  
-                    <P>Developed web scraping tools using the R language to gather a large volume of data consisting of CAPES course evaluations, available on the Sucupira platform, and prepared data for building a machine learning model to improve course evaluation. In this way, I actively participated in the creation of a robust database designed to store and organize the assessments collected at UFRJ.</P>                    
+                    <P name = "english">Developed web scraping tools using the R language to gather a large volume of data consisting of CAPES course evaluations, available on the Sucupira platform, and prepared data for building a machine learning model to improve course evaluation. In this way, I actively participated in the creation of a robust database designed to store and organize the assessments collected at UFRJ.</P>    
+                    <P name = "portuguese">Desenvolvi ferramentas de Web Scraping utilizando a linguagem R para reunir grande volume de dados constituídos por avaliações de cursos da CAPES, disponíveis na plataforma Sucupira, e preparei dados para construção de modelo de machine learning visando melhorar a avaliação dos cursos. Dessa forma, participei ativamente do criação de um banco de dados robusto destinado a armazenar e organizar as avaliações coletadas na UFRJ.</P>                  
                   </ul>
                 </div>
               </div>
@@ -2570,16 +3405,22 @@
   
   
                 <h3>
-                  <span>Researcher</span>
-                  <span class="company">
+                  <span class="company" name = "english"> Researcher
+                    &nbsp;@&nbsp;
+                    <a href="https://picme.obmep.org.br/" class="inline-link">PICME - CNPQ</a>
+                  </span>
+
+                  <span class="company" name = "portuguese"> Pesquisadora
                     &nbsp;@&nbsp;
                     <a href="https://picme.obmep.org.br/" class="inline-link">PICME - CNPQ</a>
                   </span>
                 </h3>
-                <p class="range">January 2020 - December 2020</p>
+                <p class="range" name = "english">January 2020 - December 2020</p>
+                <p class="range" name = "portuguese">Janeiro 2020 - Dezembro 2020</p>
                 <div>
                   <ul class="textJustify">  
-                    <P>Program where I had the opportunity to carry out advanced studies in Mathematics simultaneously with my undergraduate degree. The chosen topic was the study of initial mathematical models on the dynamics of the acute respiratory disease 2019-nCoV (COVID19).</P>                    
+                    <P name = "english">Program where I had the opportunity to carry out advanced studies in Mathematics simultaneously with my undergraduate degree. The chosen topic was the study of initial mathematical models on the dynamics of the acute respiratory disease 2019-nCoV (COVID19).</P>    
+                    <P name = "portuguese">Programa onde tive a oportunidade de realizar estudos avançados em Matemática simultaneamente com a graduação. O tema escolhido foi o estudo de modelos matemáticos iniciais sobre dinâmica da doença respiratória aguda 2019-nCoV (COVID19).</P>                  
                   </ul>
                 </div>
               </div>
@@ -2591,16 +3432,22 @@
   
   
                 <h3>
-                  <span>Student</span>
-                  <span class="company">
+                  <span class="company" name = "english"> Student
+                    &nbsp;@&nbsp;
+                    <a href="https://www.obmep.org.br/pic.htm" class="inline-link">PIC - CNPQ</a>
+                  </span>
+
+                  <span class="company" name = "portuguese"> Estudante 
                     &nbsp;@&nbsp;
                     <a href="https://www.obmep.org.br/pic.htm" class="inline-link">PIC - CNPQ</a>
                   </span>
                 </h3>
-                <p class="range">2011 - 2014</p>
+                <p class="range" name = "english">2011 - 2014</p>
+                <p class="range" name = "portuguese">2011 - 2014</p>
                 <div>
                   <ul class="textJustify">  
-                    <P>I participated for 4 consecutive years in the program that aims to provide the student awarded in each edition of OBMEP the contact with issues in the field of Mathematics, expanding their scientific knowledge and preparing them for future professional and academic performance.</P>                    
+                    <P name = "english">I participated for 4 consecutive years in the program that aims to provide the student awarded in each edition of OBMEP the contact with issues in the field of Mathematics, expanding their scientific knowledge and preparing them for future professional and academic performance.</P>    
+                    <P name = "portuguese">Participei por 4 anos seguidos no programa que tem como objetivo proporcionar ao aluno premiado em cada edição da OBMEP o contato com questões no ramo da Matemática, ampliando seu conhecimento científico e preparando para um futuro desempenho profissional e acadêmico.</P>                  
                   </ul>
                 </div>
               </div>
@@ -2617,7 +3464,7 @@
                               new Date().getFullYear()>document.write(new Date().getFullYear());
                           </script>
       </span>
-      <span style="font-size: 0.9rem !important; font-family: poppins-regular, sans-serif !important;">| Design by Akash Pawara and <a href="#about">Letícia Tavares</a></span>
+      <span style="font-size: 0.9rem !important; font-family: poppins-regular, sans-serif !important;">| Made by <a href="#about">Letícia Tavares</a></span>
   
     </div>
 
@@ -2632,22 +3479,34 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>My Projects</p>
+        <h2 name = "english">Portfolio</h2>
+        <p name = "english">My Projects</p>
+
+        <h2 name = "portuguese">Portfólio</h2>
+        <p name = "portuguese">Meus Projetos</p>
       </div>
 
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
 
-            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter="*" class="filter-active" id = "allOp">All</li>
 
             
-            <li data-filter=".filter-Data_Science">Data Science</li>
+            <li data-filter=".filter-Data_Science">
+              <span name = "english">Data Science</span>
+              <span name = "portuguese">Ciência de Dados</span>
+            </li>
             
-            <li data-filter=".filter-CG">CG</li>
+            <li data-filter=".filter-CG">
+              <span name = "english">CG</span>
+              <span name = "portuguese">CG</span>
+            </li>
             
-            <li data-filter=".filter-Web">Web</li>
+            <li data-filter=".filter-Web">
+              <span name = "english">Web</span>
+              <span name = "portuguese">Web</span>
+            </li>
             
           </ul>
         </div>
@@ -2662,11 +3521,15 @@
             <img src="assets/img/portfolio/temQuerosene.gif" style = "aspect-ratio: 3 / 2;" class="img-fluid" alt="">
             
             <div class="portfolio-info">
-              <h4>Tem Querosene - Website</h4>
-              <p>Web</p>
+              <h4 name = "english">Tem Querosene - Website</h4>
+              <p name = "english">Web</p>
+
+              <h4 name = "portuguese">Tem Querosene - Website</h4>
+              <p name = "portuguese">Web</p>
+
               <div class="portfolio-links">
                 <a class='portfolio-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                data-glightbox='type: external' href="assets/pages/temQuerosene.html" title='Divulge Details'>
+                data-glightbox='type: external' href="assets/pages/temQuerosene.html" title='Divulge Details' name = "knowMore">
                 <i class="bx bx-link"></i>Know more</a>
               </div>
             </div>
@@ -2679,11 +3542,15 @@
             <img src="assets/img/portfolio/find_music.png" style = "aspect-ratio: 3 / 2;" class="img-fluid" alt="">
             
             <div class="portfolio-info">
-              <h4>Find Your Music</h4>
-              <p>Web</p>
+              <h4 name = "english">Find Your Music</h4>
+              <p name = "english">Web, Data Science</p>
+
+              <h4 name = "portuguese">Encontre Sua Música</h4>
+              <p name = "portuguese">Web, Ciência de Dados</p>
+
               <div class="portfolio-links">
                 <a class='portfolio-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                data-glightbox='type: external' href="assets/pages/find_music.html" title='Divulge Details'>
+                data-glightbox='type: external' href="assets/pages/find_music.html" title='Divulge Details' name = "knowMore">
                 <i class="bx bx-link"></i>Know more</a>
               </div>
             </div>
@@ -2696,11 +3563,15 @@
             <img src="assets/img/portfolio/m-enade.png" style = "aspect-ratio: 3 / 2;" class="img-fluid" alt="">
             
             <div class="portfolio-info">
-              <h4>ENADE Analysis in 2017, 2018 and 2019</h4>
-              <p>Web</p>
+              <h4 name = "english">ENADE Analysis in 2017, 2018 and 2019</h4>
+              <p name = "english">Data Science</p>
+
+              <h4 name = "portuguese">ENADE Análises em 2017, 2018 e 2019</h4>
+              <p name = "portuguese">Ciência de Dados</p>
+
               <div class="portfolio-links">
                 <a class='portfolio-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                data-glightbox='type: external' href="assets/pages/m-enade.html" title='Divulge Details'>
+                data-glightbox='type: external' href="assets/pages/m-enade.html" title='Divulge Details' name = "knowMore">
                 <i class="bx bx-link"></i>Know more</a>
               </div>
             </div>
@@ -2713,11 +3584,15 @@
             <img src="assets/img/portfolio/Mago_Sossegado.png" style = "aspect-ratio: 3 / 2;" class="img-fluid" alt="">
             
             <div class="portfolio-info">
-              <h4>Mago Sossegado - UX Use Case</h4>
-              <p>Web</p>
+              <h4 name = "english">Mago Sossegado - UX Use Case</h4>
+              <p name = "english">Web</p>
+
+              <h4 name = "portuguese">Mago Sossegado - UX Caso de Uso</h4>
+              <p name = "portuguese">Web</p>
+
               <div class="portfolio-links">
                 <a class='portfolio-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                data-glightbox='type: external' href="assets/pages/Mago_Sossegado.html" title='Divulge Details'>
+                data-glightbox='type: external' href="assets/pages/Mago_Sossegado.html" title='Divulge Details' name = "knowMore">
                 <i class="bx bx-link"></i>Know more</a>
               </div>
             </div>
@@ -2730,11 +3605,15 @@
             <img src="assets/img/portfolio/Mago_sossegado_figma.png" style = "aspect-ratio: 3 / 2;" class="img-fluid" alt="">
             
             <div class="portfolio-info">
-              <h4>Mago Sossegado - Prototype</h4>
-              <p>Web</p>
+              <h4 name = "english">Mago Sossegado - Prototype</h4>
+              <p name = "english">Web</p>
+
+              <h4 name = "portuguese">Mago Sossegado - Protótipo</h4>
+              <p name = "portuguese">Web</p>
+
               <div class="portfolio-links">
                 <a class='portfolio-details-lightbox' data-gallery='portfolioDetailsGallery' 
-                data-glightbox='type: external' href="assets/pages/Mago_sossegado_figma.html" title='Divulge Details'>
+                data-glightbox='type: external' href="assets/pages/Mago_sossegado_figma.html" title='Divulge Details' name = "knowMore">
                 <i class="bx bx-link"></i>Know more</a>
               </div>
             </div>
@@ -2752,18 +3631,38 @@
                               new Date().getFullYear()>document.write(new Date().getFullYear());
                           </script>
       </span>
-      <span style="font-size: 0.9rem !important; font-family: poppins-regular, sans-serif !important;">| Design by Akash Pawara and <a href="#about">Letícia Tavares</a></span>
+      <span style="font-size: 0.9rem !important; font-family: poppins-regular, sans-serif !important;">| Made by <a href="#about">Letícia Tavares</a></span>
   
     </div>
   </section><!-- End Portfolio Section -->
+
+
+
 
   <!-- ======= Contact Section ======= -->
   <section id="contact" class="contact">
     <div class="container">
 
       <div class="section-title">
-        <h2>Reach out to me</h2>
-        <p>Let's be internet Bffs</p>
+        <h2 name = "english">Reach out to me</h2>
+        <p name = "english">Let's connect!</p>
+
+        <h6 style="padding-bottom: 10px;" name = "english">
+          Eager to discover more about me or my work, or feel we're a perfect match for collaboration? Let's connect! 
+          Found a bug or have a brilliant idea to enhance this site? Shoot me a message, and let's elevate it together! 
+          Whether it's a glitch, an innovative idea, or simply a friendly 'hello', I'm all ears. <br>
+        </h6>
+
+        <h2 name = "portuguese">Entre em contato comigo</h2>
+        <p name = "portuguese">Vamos nos Conectar!</p>
+
+        <h6 style="padding-bottom: 10px;" name = "portuguese">
+          Deseja descobrir mais sobre mim ou meu trabalho, ou sente que podemos fazer uma parceria incrível? 
+          Vamos nos conectar! Se encontrou um bug ou tem uma ideia brilhante para deixar este site ainda melhor, 
+          manda ver na mensagem e vamos fazer acontecer juntos! Seja para relatar um problema, sugerir uma ideia 
+          inovadora ou simplesmente trocar um 'oi', estou aqui de ouvidos bem atenta.<br>
+        </h6>
+
       </div>
 
       <div class="row mt-2">
@@ -2771,15 +3670,19 @@
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-map"></i>
-            <h3>Location</h3>
-            <p>Rio de Janeiro, Rio de Janeiro, Brazil</p>
+            <h3 name = "english">Location</h3>
+            <p name = "english">Rio de Janeiro, Rio de Janeiro, Brazil</p>
+
+            <h3 name = "portuguese">Localização</h3>
+            <p name = "portuguese">Rio de Janeiro, Rio de Janeiro, Brasil</p>
           </div>
         </div>
 
         <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
+            <h3 name = "english">Social Profiles</h3>
+            <h3 name = "portuguese">Perfis Sociais</h3>
             <div class="social-links">
               <a href="mailto:leticiatavares@dcc.ufrj.br" class="facebook"><i class="bi bi-envelope-fill"></i></a>
               <a href="https://www.linkedin.com/in/leticia-tavares-lts" class="linkedin"><i class="bi bi-linkedin"></i></a>
@@ -2829,24 +3732,25 @@
         <div class="row">
           
           <div class="col-md-6 form-group">
-            <input id="1089081189" type="text" name="entry.1089081189" class="form-control" placeholder="Your Name" required>
+            <input id="1089081189" type="text" name="entry.1089081189" class="form-control" placeholder="Name" required>
           </div>
 
           <div class="col-md-6 form-group mt-3 mt-md-0">
-            <input class="form-control" id="1830920537" type="email" name="entry.1830920537" placeholder="Your Email" required>
+            <input class="form-control" id="1830920537" type="email" name="entry.1830920537" placeholder="E-mail" required>
           </div>
         </div>
 
         <!-- Field type: "dropdown" id: "1534697710" --> 
         <div class="form-group mt-3">
             <select id="1534697710" name="entry.77499620" class="form-control selector" placeholder="Category" required>
-              <option class = "optionCatg" value="Select a Category" disabled selected>Select a Category</option>
-              <option class = "optionCatg" value="Collaboration Opportunity">Collaboration Opportunity</option>
-                <option class = "optionCatg" value="Project Proposal">Project Proposal</option>
-                <option class = "optionCatg" value="Personal Feedback">Personal Feedback</option>
-                <option class = "optionCatg" value="User Experience Feedback">User Experience Feedback</option>
-                <option class = "optionCatg" value="Bug Report">Bug Report</option>
-                <option class = "optionCatg" value="Suggestion">Suggestion</option>
+              <option class = "optionCatg" name = "op1" value="Select a Category" disabled selected>Select a Category</option>
+              <option class = "optionCatg" name = "op2" value="Collaboration Opportunity">Collaboration Opportunity</option>
+              <option class = "optionCatg" name = "op3" value="Project Proposal">Project Proposal</option>
+              <option class = "optionCatg" name = "op4" value="Personal Feedback">Personal Feedback</option>
+              <option class = "optionCatg" name = "op5" value="User Experience Feedback">User Experience Feedback</option>
+              <option class = "optionCatg" name = "op6" value="Bug Report">Bug Report</option>
+              <option class = "optionCatg" name = "op7" value="Suggestion">Suggestion</option>
+              
             </select>
             
 
@@ -2856,6 +3760,7 @@
         <div class="form-group mt-3">
           <input id="105613169" type="text" name="entry.105613169" class="form-control" placeholder="Subject" required>
         </div>
+
         <div class="form-group mt-3">
           <textarea class="form-control" id="1514125041" name="entry.1514125041" rows="10" placeholder="Message" required></textarea>
         </div>     
@@ -2870,17 +3775,22 @@
         </div> -->
 
         <div class="text-center">
-          <button type="submit" value="Submit" id="sendSignal">Send Me a Signal
-          </button>
+          <button type="submit" value="Submit" id="sendSignal"><span id = "buttonMessage">Send Me a Signal</span></button>
         </div>
+
+        <!-- <div class="text-center" name = "portugueseSwiper">
+          <button type="submit" value="Submit" id="sendSignal">Me Envie uma Mensagem!</button>
+        </div> -->
 
         <div class="formLoader" id = "messageLoader" style="display: none;">
           <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         </div>
 
         <div id = "messageReceived" style="display: none;">
-          <h2 class="formMessage"> Message received. Thank you for contacting me.</h2>
+          <h2 class="formMessage" id = "messageForm"> Message received. Thank you for contacting me.</h2>
         </div>
+
+       
   
 
       </form>
@@ -2892,7 +3802,7 @@
                               new Date().getFullYear()>document.write(new Date().getFullYear());
                           </script>
       </span>
-      <span style="font-size: 0.9rem !important; font-family: poppins-regular, sans-serif !important;">| Design by Akash Pawara and <a href="#about">Letícia Tavares</a></span>
+      <span style="font-size: 0.9rem !important; font-family: poppins-regular, sans-serif !important;">| Made by <a href="#about">Letícia Tavares</a></span>
   
     </div>
 
@@ -2904,7 +3814,7 @@
                             new Date().getFullYear()>document.write(new Date().getFullYear());
                         </script>
     </span>
-    <span style="font-size: 0.9rem !important; font-family: poppins-regular, sans-serif !important;">| Design by Akash Pawara and <a href="#about">Letícia Tavares</a></span>
+    <span style="font-size: 0.9rem !important; font-family: poppins-regular, sans-serif !important;">| Made by <a href="#about">Letícia Tavares</a></span>
 
   </div>
 
@@ -2953,6 +3863,7 @@
     })
 })
 </script>
+
 
 
 </body>

@@ -35,17 +35,25 @@
             </div>
           </div>
           <div class="col-lg-6 portfolio-info" style="padding-top: 7%;">
-            <h3>Course information</h3>
+            <h3 name = "english">Course information</h3>
+            <h3 name = "portuguese">Informações do Curso</h3>
             <ul>
-              <li><strong>Areas</strong>: DATA SCIENCE & DATA WAREHOUSE</li>
-              <li><strong>Organization</strong>: Coursera</li>
-              <li><strong>Completion date</strong>: Jan, 2023</li> 
- <li><strong>Certificate URL</strong>: <a href="https://coursera.org/share/c6499beee8a5be5b351606ec996acbe7" target="_blank">Verify</a></li>
+              <li name = "english"><strong>Areas</strong>: DATA SCIENCE & DATA WAREHOUSE</li>
+              <li name = "portuguese"><strong>Áreas</strong>: CIÊNCIA DE DADOS & DATA WAREHOUSE</li>
+              <li name = "english"><strong>Organization</strong>: Coursera</li>
+              <li name = "portuguese"><strong>Organização</strong>: Coursera</li>
+              <li name = "english"><strong>Completion Date</strong>: Jan, 2023</li> 
+ <li name = "english"><strong>Certificate URL</strong>: <a href="https://coursera.org/share/c6499beee8a5be5b351606ec996acbe7" target="_blank">Verify</a></li>
 
-              <!-- <li><strong>Certificate URL</strong>: <a href="var_link" target="_blank">Verify</a></li> -->
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Jan, 2023</li> 
+ <li name = "portuguese"><strong>Certificate URL</strong>: <a href="https://coursera.org/share/c6499beee8a5be5b351606ec996acbe7" target="_blank">Verify</a></li>
+
             </ul>
-            <p>
+            <p name = "english">
               This certificate attests to my expertise in Business Intelligence (BI) fundamentals and Data Warehousing practices, acquired through rigorous training and practical experience. It signifies my proficiency in using Linux,  commands, shell scripting, and SQL queries to perform Extract, Transform, and Load (ETL) operations efficiently. With a deep understanding of relational databases, I can execute tasks ranging from basic data retrieval to complex aggregation and joining operations, ensuring the extraction of valuable insights. <br> Furthermore, I possess the skills to automate ETL and data pipelines using BASH scripts, Apache Airflow, and Apache Kafka, streamlining data workflows and enhancing operational efficiency. Additionally, I can design and build Data Warehouses, as well as create interactive reports and dashboards, empowering organizations to derive actionable insights from their data assets. Overall, this certification validates my proficiency in BI foundations and Data Warehousing, demonstrating my readiness to drive data-driven decision-making and innovation within any organizational setting.
+            </p>
+            <p name = "portuguese">
+              Este certificado atesta minha expertise em fundamentos de Business Intelligence (BI) e práticas de Data Warehousing, adquirida através de treinamento rigoroso e experiência prática. Isso significa minha proficiência no uso de Linux, comandos, scripts de shell e consultas SQL para executar operações de extração, transformação e carregamento (ETL) com eficiência. Com um profundo conhecimento de bancos de dados relacionais, posso executar tarefas que vão desde a recuperação básica de dados até operações complexas de agregação e junção, garantindo a extração de insights valiosos. <br> Além disso, possuo habilidades para automatizar ETL e pipelines de dados usando scripts BASH, Apache Airflow e Apache Kafka, agilizando fluxos de trabalho de dados e aumentando a eficiência operacional. Além disso, posso projetar e construir data warehouses, bem como criar relatórios e painéis interativos, capacitando as organizações a obter insights acionáveis a partir de seus ativos de dados. No geral, esta certificação valida minha proficiência em fundamentos de BI e Data Warehousing, demonstrando minha prontidão para impulsionar a tomada de decisões e a inovação baseadas em dados em qualquer ambiente organizacional.
             </p>
           </div>
         </div>
@@ -57,6 +65,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+ <script>
+  // goToPT();
+  if (localStorage.idiom == "portuguese"){
+    goToPT();
+  }else if(localStorage.idiom == "english"){
+    goToEN();
+  }
+    
+    // setTimeout(function(){goToPT();}, 200);
+    
+ </script>
+  
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

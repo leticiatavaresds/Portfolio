@@ -35,15 +35,21 @@
             </div>
           </div>
           <div class="col-lg-6 portfolio-info" style="padding-top: 7%;">
-            <h3>Course information</h3>
+            <h3 name = "english">Course information</h3>
+            <h3 name = "portuguese">Informações do Curso</h3>
             <ul>
-              <li><strong>Areas</strong>: BIG DATA</li>
-              <li><strong>Organization</strong>: IBM</li>
-              <li><strong>Completion date</strong>: Jul, 2021</li>
-              <!-- <li><strong>Certificate URL</strong>: <a href="var_link" target="_blank">Verify</a></li> -->
+              <li name = "english"><strong>Areas</strong>: BIG DATA</li>
+              <li name = "portuguese"><strong>Áreas</strong>: BIG DATA</li>
+              <li name = "english"><strong>Organization</strong>: IBM</li>
+              <li name = "portuguese"><strong>Organização</strong>: IBM</li>
+              <li name = "english"><strong>Completion Date</strong>: Jul, 2021</li>
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Jul, 2021</li>
             </ul>
-            <p>
+            <p name = "english">
               In this course, I saw fundamental big data topics such as: What is Big Data? How do we deal with Big Data? Why are we interested in it? How does Big Data add value to business?; Gaining insights on how to run better businesses and provide better services to customers and recommendations on how to process big data on platforms that can handle the volume, speed, variety and veracity of big data.
+            </p>
+            <p name = "portuguese">
+              Neste curso, vi tópicos fundamentais de Big Data como: O que é Big Data? Como lidamos com Big Data? Por que estamos interessados nisso? Como o Big Data agrega valor aos negócios?; Obter insights sobre como administrar melhores negócios e fornecer melhores serviços aos clientes e recomendações sobre como processar big data em plataformas que possam lidar com o volume, a velocidade, a variedade e a veracidade do big data.
             </p>
           </div>
         </div>
@@ -55,6 +61,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+ <script>
+  // goToPT();
+  if (localStorage.idiom == "portuguese"){
+    goToPT();
+  }else if(localStorage.idiom == "english"){
+    goToEN();
+  }
+    
+    // setTimeout(function(){goToPT();}, 200);
+    
+ </script>
+  
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

@@ -35,17 +35,25 @@
             </div>
           </div>
           <div class="col-lg-6 portfolio-info" style="padding-top: 7%;">
-            <h3>Course information</h3>
+            <h3 name = "english">Course information</h3>
+            <h3 name = "portuguese">Informações do Curso</h3>
             <ul>
-              <li><strong>Areas</strong>: DATA SCIENCE</li>
-              <li><strong>Organization</strong>: IBM</li>
-              <li><strong>Completion date</strong>: Out, 2022</li> 
- <li><strong>Certificate URL</strong>: <a href="https://coursera.org/share/5da72628003f1f0214e46dfc04ac0d67" target="_blank">Verify</a></li>
+              <li name = "english"><strong>Areas</strong>: DATA SCIENCE</li>
+              <li name = "portuguese"><strong>Áreas</strong>: CIÊNCIA DE DADOS</li>
+              <li name = "english"><strong>Organization</strong>: IBM</li>
+              <li name = "portuguese"><strong>Organização</strong>: IBM</li>
+              <li name = "english"><strong>Completion Date</strong>: Oct, 2022</li> 
+ <li name = "english"><strong>Certificate URL</strong>: <a href="https://coursera.org/share/5da72628003f1f0214e46dfc04ac0d67" target="_blank">Verify</a></li>
 
-              <!-- <li><strong>Certificate URL</strong>: <a href="var_link" target="_blank">Verify</a></li> -->
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Out, 2022</li> 
+ <li name = "portuguese"><strong>Certificate URL</strong>: <a href="https://coursera.org/share/5da72628003f1f0214e46dfc04ac0d67" target="_blank">Verify</a></li>
+
             </ul>
-            <p>
+            <p name = "english">
               In this course made available by IBM on the Coursera platform, I saw SQL topics with Python, from the basics of fundamental SQL statements like Select to advanced concepts like JOINs. Through laboratories and practical projects, I was able to practice creating SQL queries, working with databases in the IBM cloud and using Jupyter notebook as a tool for communicating with the cloud.
+            </p>
+            <p name = "portuguese">
+              Neste curso disponibilizado pela IBM na plataforma Coursera, vi tópicos de SQL com Python, desde o básico de instruções SQL fundamentais como Select até conceitos avançados como JOINs. Através de laboratórios e projetos práticos, pude praticar a criação de consultas SQL, trabalhar com bancos de dados na nuvem IBM e utilizar o notebook Jupyter como ferramenta de comunicação com a nuvem.
             </p>
           </div>
         </div>
@@ -57,6 +65,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+ <script>
+  // goToPT();
+  if (localStorage.idiom == "portuguese"){
+    goToPT();
+  }else if(localStorage.idiom == "english"){
+    goToEN();
+  }
+    
+    // setTimeout(function(){goToPT();}, 200);
+    
+ </script>
+  
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

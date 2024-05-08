@@ -22,7 +22,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-            <h2 class="portfolio-title">Tem Querosene - Website</h2>
+            <h2 class="portfolio-title" name = "english">Tem Querosene - Website</h2>
+            <h2 class="portfolio-title" name = "portuguese">Tem Querosene - Website</h2>
+
             <div class="portfolio-details-slider swiper-container">
               <div class="swiper-wrapper align-items-center">                
                 <div class="swiper-slide">
@@ -54,15 +56,28 @@
             </div>
           </div>
           <div class="col-lg-4 portfolio-info">
-            <h3>Project information</h3>
+            <h3 name = "english">Project information</h3>
+            <h3 name = "portuguese">Informações do Projeto</h3>
             <ul>
-              <li><strong>Category</strong>: WEB DESIGN</li>
-              <li><strong>Client</strong>: Personal</li>
-              <li><strong>Project date</strong>: Jan 31, 2023</li>
-              <li><strong>Project URL</strong>: <a target="_blank" href="https://temquerosene.netlify.app/">https://temquerosene.netlify.app/</a></li>
+              
+              
+
+              <li name = "english"><strong>Category</strong>: WEB DESIGN</li>
+              <li name = "portuguese"><strong>Categoria</strong>: WEB DESIGN</li>
+              <li name = "english"><strong>Client</strong>: Personal</li>
+              <li name = "portuguese"><strong>Cliente</strong>: Pessoal</li>
+              <li name = "english"><strong>Data do Projeto</strong>: Jan 31, 2023</li>
+              <li name = "portuguese"><strong>Data de Conclusão</strong>: Jan 31, 2023</li>
+              <li name = "english"><strong>Project URL</strong>: <a target="_blank" href="https://temquerosene.netlify.app/">https://temquerosene.netlify.app/</a></li>
+              <li name = "portuguese"><strong>URL do Projeto</strong>: <a target="_blank" href="https://temquerosene.netlify.app/">https://temquerosene.netlify.app/</a></li>
+
+
             </ul>
-            <p>
+            <p name = "english">
               This is a website dedicated to the theatrical production "Tem Querosene na Mochila", which took place on the stage of "O Tablado" in January 2024. Crafted with pure HTML5, CSS, and JavaScript, it is a responsive webpage designed to encapsulate the rebellious essence of rock and roll. <br> Dynamic imagery, characterized by fluid movements and vibrant warm colors, serves as a visual homage to the production's spirited narrative. To streamline the website's creation process, I utilized the Flask library alongside Python, enabling automation. Subsequently, the Flask Frozen library was employed to generate a collection of static files, ensuring seamless hosting without the need for server-side software.
+            </p>
+            <p name = "portuguese">
+              Este é um site dedicado à produção teatral 'Tem Querosene na Mochila', que ocorreu no palco de 'O Tablado' em janeiro de 2024. Desenvolvido com HTML5 puro, CSS e JavaScript, é uma página responsiva projetada para encapsular a essência rebelde do rock and roll. <br> Imagens dinâmicas, caracterizadas por movimentos fluidos e cores vibrantes e quentes, servem como uma homenagem visual à narrativa cheia de espírito da produção. Para simplificar o processo de criação do site, utilizei a biblioteca Flask junto com Python, permitindo automação. Posteriormente, a biblioteca Flask Frozen foi empregada para gerar uma coleção de arquivos estáticos, garantindo hospedagem sem problemas, sem a necessidade de software do lado do servidor.
             </p>
           </div>
         </div>
@@ -74,6 +89,19 @@
   <script src="../vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../js/main.min.js"></script>
+
+  <script>
+    // goToPT();
+    if (localStorage.idiom == "portuguese"){
+      goToPT();
+    }else if(localStorage.idiom == "english"){
+      goToEN();
+    }
+      
+      // setTimeout(function(){goToPT();}, 200);
+      
+   </script>
+
 </body>
 
 <!-- Mirrored from akashpawara.com/assets/pages/budget by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Apr 2024 12:29:49 GMT -->

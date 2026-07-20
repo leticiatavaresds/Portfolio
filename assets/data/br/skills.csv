@@ -1,0 +1,28 @@
+﻿Nome;Porcentagem;Categoria;NomeArq;TimePr;TimePe;Link
+Python;90;Linguagens;python;2021;2017;https://www.python.org/
+R;80;Linguagens;R;2022;2020;https://www.r-project.org/
+SQL;70;Linguagens;Sql;2021;2020;https://en.wikipedia.org/wiki/SQL
+Java;70;Linguagens;java;2022;2019;https://en.wikipedia.org/wiki/Java_(programming_language)
+C;60;Linguagens;c;0;2018;https://en.wikipedia.org/wiki/C_(programming_language)
+Github;70;Ferramentas;github;2021;2020;https://github.com/
+ Jupyter Notebook;90;Ferramentas;Jupyter;2021;2019;https://docs.jupyter.org/en/latest/
+Tableau;70;Ferramentas;tableau;2023;2023;https://www.tableau.com/
+Power BI;70;Ferramentas;powerBi;2023;2023;https://www.microsoft.com/pt-br/power-platform/products/power-bi?
+HTML;70;Linguagens;html-5;0;2019;https://developer.mozilla.org/pt-BR/docs/Web/HTML
+CSS;60;Linguagens;css-3;0;2019;https://developer.mozilla.org/pt-BR/docs/Web/CSS
+JavaScript;50;Linguagens;js;0;2019;https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+Power Point;80;Ferramentas;powerpoint;2014;2021;https://www.microsoft.com/pt-br/microsoft-365/powerpoint
+Excel;70;Ferramentas;excel;2014;2021;https://www.microsoft.com/pt-br/microsoft-365/excel
+Pandas;90;Ferramentas;pandas;2018;2021;https://pandas.pydata.org/
+Numpy;70;Ferramentas;numpy;2018;2021;https://numpy.org/
+Scikitlearn;70;Ferramentas;Scikitlearn;2019;2021;https://scikit-learn.org/stable/
+Matplotlib;60;Ferramentas;matplotlib;2021;2021;https://matplotlib.org/
+Apache Spark;50;Ferramentas;spark;2021;2021;https://spark.apache.org/
+Classificação;70;Dados;;2018;2021;https://www.datarobot.com/wiki/classification/
+Regressão;70;Dados;;2020;2021;https://www.datarobot.com/wiki/regression/
+Clusterização;70;Dados;;2021;2021;https://pt.wikipedia.org/wiki/Clustering
+Série temporal;60;Dados;;2022;2022;https://en.wikipedia.org/wiki/Time_series
+Aprendizado Profundo;50;Dados;;2021;2023;https://en.wikipedia.org/wiki/Deep_learning
+Teste de Hipóteses;60;Dados;;2022;2022;https://en.wikipedia.org/wiki/Statistical_hypothesis_test
+Teste A/B;70;Dados;;2022;2022;https://en.wikipedia.org/wiki/A/B_testing
+Análise Descritiva;70;Dados;;2022;2022;https://en.wikipedia.org/wiki/Descriptive_statistics

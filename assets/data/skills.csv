@@ -1,0 +1,28 @@
+﻿Nome;NomePt;Porcentagem;Categoria;NomeArq;TimePr;TimePe;Link
+Python;Python;90;Languages;python;2021;2017;https://www.python.org/
+R;R;80;Languages;R;2022;2020;https://www.r-project.org/
+SQL;SQL;70;Languages;Sql;2021;2020;https://en.wikipedia.org/wiki/SQL
+Java;Java;70;Languages;java;2022;2019;https://en.wikipedia.org/wiki/Java_(programming_language)
+C;C;60;Languages;c;0;2018;https://en.wikipedia.org/wiki/C_(programming_language)
+Github;Github;70;Tools;github;2021;2020;https://github.com/
+ Jupyter Notebook; Jupyter Notebook;90;Tools;Jupyter;2021;2019;https://docs.jupyter.org/en/latest/
+Tableau;Tableau;70;Tools;tableau;2023;2023;https://www.tableau.com/
+Power BI;Power BI;70;Tools;powerBi;2023;2023;https://www.microsoft.com/pt-br/power-platform/products/power-bi?
+HTML;HTML;70;Languages;html-5;0;2019;https://developer.mozilla.org/en-US/docs/Web/HTML
+CSS;CSS;60;Languages;css-3;0;2019;https://developer.mozilla.orgen-US/docs/Web/CSS
+JavaScript;JavaScript;50;Languages;js;0;2019;https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Power Point;Power Point;80;Tools;powerpoint;2014;2021;https://www.microsoft.com/pt-br/microsoft-365/powerpoint
+Excel;Excel;70;Tools;excel;2014;2021;https://www.microsoft.com/pt-br/microsoft-365/excel
+Pandas;Pandas;90;Tools;pandas;2018;2021;https://pandas.pydata.org/
+Numpy;Numpy;70;Tools;numpy;2018;2021;https://numpy.org/
+Scikitlearn;Scikitlearn;70;Tools;Scikitlearn;2019;2021;https://scikit-learn.org/stable/
+Matplotlib;Matplotlib;60;Tools;matplotlib;2021;2021;https://matplotlib.org/
+Apache Spark;Apache Spark;50;Tools;spark;2021;2021;https://spark.apache.org/
+Classification;Classificação;70;Data Skills;;2018;2021;https://www.datarobot.com/wiki/classification/
+Regression;Regressão;70;Data Skills;;2020;2021;https://www.datarobot.com/wiki/regression/
+Clustering;Clusterização;70;Data Skills;;2021;2021;https://pt.wikipedia.org/wiki/Clustering
+Time Series;Série Temporal;60;Data Skills;;2022;2022;https://en.wikipedia.org/wiki/Time_series
+Deep Learning;Aprendizado Profundo;50;Data Skills;;2021;2023;https://en.wikipedia.org/wiki/Deep_learning
+Hypothesis Testing;Teste de Hipóteses;60;Data Skills;;2022;2022;https://en.wikipedia.org/wiki/Statistical_hypothesis_test
+A/B testing;Teste A/B;70;Data Skills;;2022;2022;https://en.wikipedia.org/wiki/A/B_testing
+Descriptive Analysis;Análise Descritiva;70;Data Skills;;2022;2022;https://en.wikipedia.org/wiki/Descriptive_statistics

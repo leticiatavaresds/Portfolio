@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Badge placeholder</title>
+  <desc id="desc">Placeholder image for a badge awaiting upload.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1b2a" />
+      <stop offset="100%" stop-color="#133d52" />
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="32" fill="url(#bg)" />
+  <circle cx="120" cy="92" r="42" fill="#10e3e6" opacity="0.18" />
+  <path d="M120 56l11.8 23.9 26.4 3.8-19.1 18.6 4.5 26.3L120 116.2 96.4 128.6l4.5-26.3-19.1-18.6 26.4-3.8L120 56z" fill="#10e3e6" />
+  <text x="120" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#e8fdff">Upload</text>
+  <text x="120" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#e8fdff">badge image</text>
+</svg>

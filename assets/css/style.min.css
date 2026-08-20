@@ -560,7 +560,8 @@ body {
   
   .certificates .certificate-item {
     box-sizing: content-box;
-    min-height: 320px
+    min-height: 320px;
+    position: relative
   }
   
   .certificates .certificate-item .certificate-img {
@@ -577,6 +578,16 @@ body {
     font-weight: bold;
     margin: 10px 0 5px 45px;
     color: #fff
+  }
+
+  .certificates .certificate-item .certificate-item__title {
+    margin: 14px 0 8px;
+    text-align: center;
+    color: #f3ffff;
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
   }
   
   .certificates .certificate-item h4 {
@@ -614,6 +625,11 @@ body {
     position: relative;
     z-index: 1
   }
+
+  .certificate-card-edit-button {
+    top: 12px;
+    right: 12px;
+  }
   
   .certificates .swiper-pagination {
     margin-top: 20px;
@@ -629,6 +645,29 @@ body {
   
   .certificates .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #03999c
+  }
+
+  .certificates-group + .certificates-group {
+    margin-top: 42px;
+  }
+
+  .certificates-group__title {
+    margin: 0 0 18px;
+    color: #7de7e3;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .certificates-empty {
+    margin: 0;
+    padding: 22px 24px;
+    border: 1px solid rgba(125, 231, 227, 0.16);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.72);
   }
   
   .resume .resume-title {
@@ -1871,6 +1910,10 @@ button {
         padding-bottom: 10%;
         margin: auto;
     }
+
+    .about-title-desktop {
+        display: none;
+    }
 }
 
 @media (min-width: 765px) and (max-width: 993px){
@@ -1880,18 +1923,203 @@ button {
         width: 50%;
 
     }
+
+    .about-title-desktop {
+        display: none;
+    }
 }
 
 @media (min-width: 994px){
+    .about-title-mobile {
+        display: none;
+    }
+
     .picProfile {
-        padding-bottom: 5%;
-        margin: auto;
+        padding-bottom: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 0;
+    }
+
+    .about-sticky {
+        position: sticky;
+        top: 110px;
+        width: 100%;
+    }
+
+    .about-title-desktop {
+        margin-bottom: 32px;
+    }
+
+    .picProfile .about__StyledPic-eLtfEo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .picProfile .wrapper {
+        max-width: 390px;
+        margin: 0 auto;
+        transform: translateY(0);
     }
 }
 
 .textJustify{
     text-align: justify;
     padding-right: 3% !important;
+}
+
+.skills-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.skills-section-title > div {
+    min-width: 0;
+}
+
+.skills-admin-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border: 1px solid rgba(3, 153, 156, 0.85);
+    border-radius: 999px;
+    background: rgba(3, 153, 156, 0.12);
+    color: #9af5f2;
+    font-size: 18px;
+    line-height: 1;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.skills-admin-icon-button:hover {
+    color: #041317;
+    background: #7de7e3;
+    transform: translateY(-1px);
+}
+
+.skills-admin-icon-button--add {
+    margin-top: -8px;
+}
+
+.ag-courses_item {
+    position: relative;
+}
+
+.skills-card-edit-button {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    background: rgba(4, 19, 23, 0.88);
+    color: #d9ffff;
+    font-size: 15px;
+    line-height: 1;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.skills-card-edit-button:hover {
+    color: #041317;
+    background: #7de7e3;
+}
+
+.skills-modal[hidden] {
+    display: none !important;
+}
+
+.skills-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2200;
+}
+
+.skills-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 8, 12, 0.72);
+    backdrop-filter: blur(8px);
+}
+
+.skills-modal__dialog {
+    position: relative;
+    z-index: 1;
+    width: min(720px, calc(100vw - 32px));
+    max-height: calc(100vh - 48px);
+    margin: 24px auto;
+    overflow: auto;
+    padding: 20px;
+    border: 1px solid rgba(3, 153, 156, 0.4);
+    border-radius: 18px;
+    background: rgba(5, 14, 22, 0.96);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+}
+
+.skills-modal__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.skills-modal__title {
+    margin: 6px 0 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+.skills-modal__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #d9ffff;
+    font-size: 16px;
+}
+
+.skills-modal__close:hover {
+    color: #041317;
+    background: #7de7e3;
+}
+
+.skills-modal__status {
+    min-height: 24px;
+}
+
+@media (max-width: 600px) {
+    .skills-section-title {
+        align-items: flex-start;
+    }
+
+    .skills-admin-icon-button--add {
+        margin-top: 0;
+    }
+
+    .skills-modal__dialog {
+        width: calc(100vw - 20px);
+        max-height: calc(100vh - 20px);
+        margin: 10px auto;
+        padding: 16px;
+    }
 }
 
 
@@ -2221,6 +2449,9 @@ select option:checked:after {
     text-decoration: none;
     color: #FFF;
   }
+  .ag-courses-item_link:hover .progress-bar {
+    background-color: var(--skill-effect-color-light, #7de7e3);
+  }
   .ag-courses-item_link:hover .ag-courses-item_bg {
     -webkit-transform: scale(10);
     -ms-transform: scale(10);
@@ -2257,7 +2488,7 @@ select option:checked:after {
   .ag-courses-item_bg {
     height: 128px;
     width: 128px;
-    background-color: #10e3e6;
+    background-color: var(--skill-effect-color, #10e3e6);
   
     z-index: 1;
     position: absolute;
@@ -2270,22 +2501,6 @@ select option:checked:after {
     -o-transition: all .5s ease;
     transition: all .5s ease;
   }
-  .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
-    background-color: #3ecd5e;
-  }
-  .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
-    background-color: #e44002;
-  }
-  .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
-    background-color: #952aff;
-  }
-  .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
-    background-color: #cd3e94;
-  }
-  .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
-    background-color: #4c49ea;
-  }
-  
   @media only screen and (max-width: 1200px) {
     .ag-courses_item {
       -ms-flex-preferred-size: calc(25% - 30px);
@@ -2500,5 +2715,213 @@ select option:checked:after {
 
 [name=portuguese] {
   display: none;
+}
+
+.editor-toolbar {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2000;
+  width: min(420px, calc(100vw - 32px));
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+  padding: 16px;
+  border: 1px solid rgba(3, 153, 156, 0.45);
+  border-radius: 14px;
+  background: rgba(5, 14, 22, 0.94);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.editor-toolbar--page {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  max-height: none;
+}
+
+.admin-page {
+  min-height: 100vh;
+}
+
+.admin-shell {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+.admin-shell__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.admin-shell__subtitle {
+  margin: 6px 0 0;
+  color: rgba(255,255,255,.78);
+}
+
+.admin-shell__link {
+  text-decoration: none;
+}
+
+.editor-toolbar__title {
+  margin-bottom: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #7de7e3;
+}
+
+.editor-toolbar__status {
+  min-height: 42px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.editor-toolbar__controls,
+.editor-toolbar__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.editor-color-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.editor-toolbar__input--color {
+  width: 64px;
+  min-width: 64px;
+  height: 44px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.editor-color-preview {
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+.editor-color-value {
+  color: #b9ece9;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.editor-toolbar__label {
+  color: #b9ece9;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.editor-toolbar__input,
+.editor-toolbar__textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(125, 231, 227, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.editor-toolbar__textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.editor-toolbar__form {
+  margin-top: 8px;
+}
+
+.editor-toolbar__upload {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(125, 231, 227, 0.15);
+}
+
+.editor-toolbar__upload-header {
+  color: #7de7e3;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.editor-toolbar__hint {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.editor-toolbar__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.editor-toolbar__button {
+  padding: 10px 14px;
+  border: 1px solid #03999c;
+  border-radius: 10px;
+  background: #03999c;
+  color: #041317;
+  font-weight: 700;
+}
+
+.editor-toolbar__button[disabled] {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.editor-toolbar__button--ghost {
+  background: transparent;
+  color: #d5f9f7;
+}
+
+.editor-toolbar__button--danger {
+  border-color: rgba(255, 107, 107, 0.85);
+  background: rgba(255, 107, 107, 0.9);
+  color: #240708;
+}
+
+@media (max-width: 768px) {
+  .editor-toolbar {
+    right: 12px;
+    left: 12px;
+    bottom: 12px;
+    width: auto;
+  }
+
+  .editor-toolbar--page {
+    right: auto;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+  }
+
+  .admin-shell__header {
+    flex-direction: column;
+  }
 }
 

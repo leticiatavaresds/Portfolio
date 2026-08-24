@@ -178,8 +178,9 @@
     const safeValue = value ?? "";
     const inputId = `${prefix}-field-${column.name}`;
     const isProjectDescriptionField = prefix === "project-editor" && ["Descricao", "DescricaoPt"].includes(column.name);
+    const isResumeDescriptionField = ["education-editor", "academic-editor"].includes(prefix) && ["Texto", "TextoPt"].includes(column.name);
     const isAboutBodyField = prefix === "about-editor" && column.name === "BodyText";
-    const isLongText = isProjectDescriptionField || isAboutBodyField || (column.type === "TEXT" && String(safeValue).length > 120);
+    const isLongText = isProjectDescriptionField || isResumeDescriptionField || isAboutBodyField || (column.type === "TEXT" && String(safeValue).length > 120);
     const isColorField = column.name === "CorEfeito";
     const isCertificateEditor = prefix === "certificate-editor";
     const isProjectEditor = prefix === "project-editor";
@@ -2566,11 +2567,310 @@
     });
   }
 
+  function initializeSimpleCollectionModal(config) {
+    const modal = document.getElementById(config.modalId);
+    if (!modal) {
+      return;
+    }
+
+    const elements = {
+      status: document.getElementById(config.statusId),
+      rowSelect: document.getElementById(config.rowSelectId),
+      form: document.getElementById(config.formId),
+      newButton: document.getElementById(config.newButtonId),
+      moveUpButton: document.getElementById(config.moveUpButtonId),
+      moveDownButton: document.getElementById(config.moveDownButtonId),
+      saveButton: document.getElementById(config.saveButtonId),
+      deleteButton: document.getElementById(config.deleteButtonId)
+    };
+
+    const state = {
+      table: null,
+      rows: [],
+      mode: "edit",
+      currentRowId: null
+    };
+
+    function setStatus(message) {
+      if (elements.status) {
+        elements.status.textContent = message;
+      }
+    }
+
+    function openModal() {
+      modal.hidden = false;
+      document.body.classList.add("editor-modal-open");
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      document.body.classList.remove("editor-modal-open");
+    }
+
+    function getRowLabel(row) {
+      const parts = (config.labelColumns || [])
+        .map((columnName) => String(row[columnName] || "").trim())
+        .filter(Boolean);
+      return parts.join(" | ") || `${config.fallbackLabel} ${row.id}`;
+    }
+
+    function renderRowOptions() {
+      if (!elements.rowSelect) {
+        return;
+      }
+
+      const placeholder = `<option value="">Selecione ${config.placeholderLabel}</option>`;
+      const options = state.rows
+        .map((row) => `<option value="${row.id}">${escapeHtml(getRowLabel(row))}</option>`)
+        .join("");
+      elements.rowSelect.innerHTML = placeholder + options;
+      elements.rowSelect.value = state.currentRowId ? String(state.currentRowId) : "";
+    }
+
+    function renderForm(row) {
+      if (!elements.form) {
+        return;
+      }
+
+      const currentRow = row || {};
+      const columns = (state.table?.columns || []).filter((column) => column.name !== "Ordem");
+      elements.form.innerHTML = columns
+        .map((column) => buildFieldMarkup(column, currentRow[column.name], config.prefix))
+        .join("");
+
+      const hasSelectedRow = Boolean(state.currentRowId);
+      if (elements.deleteButton) {
+        elements.deleteButton.disabled = !hasSelectedRow;
+      }
+      if (elements.moveUpButton) {
+        elements.moveUpButton.disabled = !hasSelectedRow;
+      }
+      if (elements.moveDownButton) {
+        elements.moveDownButton.disabled = !hasSelectedRow;
+      }
+    }
+
+    async function ensureTable() {
+      if (state.table) {
+        return state.table;
+      }
+
+      const data = await requestJson(metaUrl);
+      state.table = (data.tables || []).find((table) => table.name === config.tableName) || null;
+      if (!state.table) {
+        throw new Error(`Tabela ${config.tableName} nao encontrada.`);
+      }
+      return state.table;
+    }
+
+    async function loadRows() {
+      const data = await requestJson(`${rowsUrlBase}/${config.tableName}/rows`);
+      state.rows = data.rows || [];
+    }
+
+    async function refreshAndRender() {
+      await loadRows();
+      renderRowOptions();
+      const activeRow = state.rows.find((row) => row.id === state.currentRowId) || {};
+      renderForm(activeRow);
+    }
+
+    async function openEditor() {
+      await ensureTable();
+      await loadRows();
+      state.mode = "edit";
+      state.currentRowId = state.rows[0]?.id || null;
+      renderRowOptions();
+      renderForm(state.rows[0] || {});
+      setStatus(state.currentRowId ? config.editStatus : config.emptyStatus);
+      openModal();
+    }
+
+    document.querySelectorAll(config.openSelector).forEach((button) => {
+      button.addEventListener("click", async function () {
+        setStatus("Carregando...");
+        try {
+          await openEditor();
+        } catch (error) {
+          setStatus(error.message);
+          openModal();
+        }
+      });
+    });
+
+    elements.rowSelect?.addEventListener("change", function () {
+      const selectedId = Number(this.value);
+      state.currentRowId = Number.isFinite(selectedId) && selectedId > 0 ? selectedId : null;
+      state.mode = state.currentRowId ? "edit" : "create";
+      const row = state.rows.find((item) => item.id === state.currentRowId) || {};
+      renderForm(row);
+      setStatus(state.currentRowId ? config.editSelectionStatus : config.createStatus);
+    });
+
+    elements.newButton?.addEventListener("click", function () {
+      state.mode = "create";
+      state.currentRowId = null;
+      if (elements.rowSelect) {
+        elements.rowSelect.value = "";
+      }
+      renderForm({});
+      setStatus(config.newStatus);
+    });
+
+    elements.saveButton?.addEventListener("click", async function () {
+      if (!state.table || !elements.form) {
+        return;
+      }
+
+      setStatus(config.savingStatus);
+      try {
+        const payload = collectFormData(elements.form);
+        const maxOrder = state.rows.reduce((highest, row) => Math.max(highest, Number(row.Ordem) || 0), 0);
+        if (state.mode === "create" || !state.currentRowId) {
+          payload.Ordem = maxOrder + 1;
+        } else {
+          const currentRow = state.rows.find((row) => row.id === state.currentRowId);
+          payload.Ordem = currentRow ? currentRow.Ordem : maxOrder + 1;
+        }
+
+        await requestJson(
+          state.mode === "edit" && state.currentRowId ? `${rowsUrlBase}/${config.tableName}/rows/${state.currentRowId}` : `${rowsUrlBase}/${config.tableName}/rows`,
+          {
+            method: state.mode === "edit" && state.currentRowId ? "PUT" : "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          }
+        );
+
+        setStatus(config.savedStatus);
+        window.location.reload();
+      } catch (error) {
+        setStatus(error.message);
+      }
+    });
+
+    elements.deleteButton?.addEventListener("click", async function () {
+      if (!state.currentRowId) {
+        return;
+      }
+      if (!window.confirm(config.deleteConfirmMessage)) {
+        return;
+      }
+
+      setStatus(config.deletingStatus);
+      try {
+        await requestJson(`${rowsUrlBase}/${config.tableName}/rows/${state.currentRowId}`, { method: "DELETE" });
+        setStatus(config.deletedStatus);
+        window.location.reload();
+      } catch (error) {
+        setStatus(error.message);
+      }
+    });
+
+    async function moveRow(direction) {
+      if (!state.currentRowId) {
+        return;
+      }
+      setStatus(direction === "up" ? config.moveUpStatus : config.moveDownStatus);
+      try {
+        await requestJson(`${rowsUrlBase}/${config.tableName}/rows/${state.currentRowId}/move`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ direction })
+        });
+        await refreshAndRender();
+        setStatus(config.reorderedStatus);
+      } catch (error) {
+        setStatus(error.message);
+      }
+    }
+
+    elements.moveUpButton?.addEventListener("click", async function () {
+      await moveRow("up");
+    });
+
+    elements.moveDownButton?.addEventListener("click", async function () {
+      await moveRow("down");
+    });
+
+    modal.querySelectorAll(config.closeSelector).forEach((button) => {
+      button.addEventListener("click", closeModal);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !modal.hidden) {
+        closeModal();
+      }
+    });
+  }
+
   initializePageEditor();
   initializeSkillModal();
   initializeCertificateModal();
   initializeBadgeModal();
   initializeJobsModal();
+  initializeSimpleCollectionModal({
+    modalId: "education-editor-modal",
+    statusId: "education-editor-status",
+    rowSelectId: "education-editor-row",
+    formId: "education-editor-form",
+    newButtonId: "education-editor-new",
+    moveUpButtonId: "education-editor-move-up",
+    moveDownButtonId: "education-editor-move-down",
+    saveButtonId: "education-editor-save",
+    deleteButtonId: "education-editor-delete",
+    tableName: "education",
+    prefix: "education-editor",
+    openSelector: "[data-education-action='open']",
+    closeSelector: "[data-education-modal-close]",
+    placeholderLabel: "uma formação",
+    fallbackLabel: "Formacao",
+    labelColumns: ["Instituto", "CursoPt", "Curso"],
+    editStatus: "Edite a formação selecionada.",
+    emptyStatus: "Nenhuma formação encontrada.",
+    editSelectionStatus: "Editando formação selecionada.",
+    createStatus: "Preencha os campos para criar uma formação.",
+    newStatus: "Nova formação. Preencha os campos e salve.",
+    savingStatus: "Salvando formação...",
+    savedStatus: "Formação salva. Recarregando a pagina...",
+    deleteConfirmMessage: "Excluir esta formação acadêmica?",
+    deletingStatus: "Excluindo formação...",
+    deletedStatus: "Formação excluida. Recarregando a pagina...",
+    moveUpStatus: "Subindo formação...",
+    moveDownStatus: "Descendo formação...",
+    reorderedStatus: "Ordem atualizada."
+  });
+  initializeSimpleCollectionModal({
+    modalId: "academic-editor-modal",
+    statusId: "academic-editor-status",
+    rowSelectId: "academic-editor-row",
+    formId: "academic-editor-form",
+    newButtonId: "academic-editor-new",
+    moveUpButtonId: "academic-editor-move-up",
+    moveDownButtonId: "academic-editor-move-down",
+    saveButtonId: "academic-editor-save",
+    deleteButtonId: "academic-editor-delete",
+    tableName: "academic",
+    prefix: "academic-editor",
+    openSelector: "[data-academic-action='open']",
+    closeSelector: "[data-academic-modal-close]",
+    placeholderLabel: "uma experiência acadêmica",
+    fallbackLabel: "Experiencia",
+    labelColumns: ["Instituto", "CursoPt", "Curso"],
+    editStatus: "Edite a experiência acadêmica selecionada.",
+    emptyStatus: "Nenhuma experiência acadêmica encontrada.",
+    editSelectionStatus: "Editando experiência acadêmica selecionada.",
+    createStatus: "Preencha os campos para criar uma experiência acadêmica.",
+    newStatus: "Nova experiência acadêmica. Preencha os campos e salve.",
+    savingStatus: "Salvando experiência acadêmica...",
+    savedStatus: "Experiência acadêmica salva. Recarregando a pagina...",
+    deleteConfirmMessage: "Excluir esta experiência acadêmica?",
+    deletingStatus: "Excluindo experiência acadêmica...",
+    deletedStatus: "Experiência acadêmica excluida. Recarregando a pagina...",
+    moveUpStatus: "Subindo experiência acadêmica...",
+    moveDownStatus: "Descendo experiência acadêmica...",
+    reorderedStatus: "Ordem atualizada."
+  });
   initializeAboutModal();
   initializeProjectModal();
 })();
